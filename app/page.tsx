@@ -107,7 +107,7 @@ function LoanPaths() {
     {
       n: '01',
       t: 'Purchase',
-      d: 'First home, move-up, or investment. FHA, Conventional 97, VA, USDA, and AHFC programs. Down payments from 0% to 20%.',
+      d: 'First home, move-up, or investment. FHA, Conventional 97, VA, and USDA programs. Down payments from 0% to 20%.',
     },
     {
       n: '02',

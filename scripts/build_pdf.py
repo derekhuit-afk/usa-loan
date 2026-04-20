@@ -256,7 +256,6 @@ def build_story():
         ["FHA", "3.5%", "580", "Lower credit, first-time buyers, higher DTI tolerance"],
         ["VA", "0%", "580*", "Active military, veterans, qualifying spouses"],
         ["USDA", "0%", "640", "Rural/suburban areas, income-limited"],
-        ["AK \u2014 AHFC", "Varies", "640+", "Alaska first-time buyers (state program)"],
     ], colWidths=[1.6*inch, 1.0*inch, 1.0*inch, 2.7*inch])
     loan_table.setStyle(TableStyle([
         ("BACKGROUND", (0,0), (-1,0), NAVY),
@@ -276,8 +275,8 @@ def build_story():
     s.append(P("*VA loans don't have a set minimum by statute, but most lenders require 580\u2013620.", "caption"))
     s.append(P("What about PMI?", "h2"))
     s.append(P("If you put less than 20% down on a conventional loan, you'll pay <b>Private Mortgage Insurance (PMI)</b> \u2014 typically 0.3\u20131.5% of the loan annually. The good news: on conventional loans, PMI drops off automatically at 78% loan-to-value. FHA works differently \u2014 its MIP stays for the life of the loan in most cases, which is why many buyers refinance out of FHA once they hit 20% equity."))
-    s.append(callout_box("Alaska buyers: don't overlook AHFC.",
-        "The <b>Alaska Housing Finance Corporation</b> offers below-market rates, down payment assistance, and a Tax Credit Advantage program for eligible first-time buyers. I've closed hundreds of these. Ask me if you qualify."))
+    s.append(callout_box("Don't overlook state and local first-time buyer programs.",
+        "Most states offer below-market rates, down payment assistance, and tax credit programs for eligible first-time buyers \u2014 on top of the federal programs above. Eligibility, limits, and benefits vary by state. Ask me what's available in yours; I'll run your scenario and tell you whether stacking a state program makes sense for your situation."))
     s.append(PageBreak())
 
     # Page 9 - Costs
