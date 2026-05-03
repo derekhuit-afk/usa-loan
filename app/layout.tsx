@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://usa.loan'),
   title: 'USA.loan — Get Pre-Approved in Minutes | Derek Huit, NMLS #203980',
   description:
-    'Mortgage applications made simple. 18 years of experience, $1B+ in loans originated. Powered by Cardinal Financial Company, Limited Partnership (NMLS #66247). Get your free first-time homebuyer playbook.',
+    'Mortgage applications made simple. 18 years of experience, $800M+ in loans originated. Powered by Cardinal Financial Company, Limited Partnership (NMLS #66247). Get your free first-time homebuyer playbook.',
   keywords: ['mortgage', 'home loan', 'first-time homebuyer', 'pre-approval', 'refinance', 'VA loan', 'FHA', 'Derek Huit', 'Cardinal Financial'],
   openGraph: {
     title: 'USA.loan — Get Pre-Approved in Minutes',
-    description: '18 years. $1B+ originated. Straightforward home loans from Derek Huit, NMLS #203980.',
+    description: '18 years. $800M+ originated. Straightforward home loans from Derek Huit, NMLS #203980.',
     url: 'https://usa.loan',
     siteName: 'USA.loan',
     type: 'website',
