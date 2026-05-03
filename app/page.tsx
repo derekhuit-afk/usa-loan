@@ -50,7 +50,7 @@ function Hero() {
         </h1>
 
         <p className="rise rise-3 mt-8 max-w-2xl text-lg leading-relaxed text-cream/80 md:text-xl">
-          Straightforward home loans from a lender who's actually closed a billion dollars of them. No callback games.
+          Straightforward home loans from a lender who's actually closed $800 million of them. No callback games.
           No bait-and-switch. Just real numbers, fast answers, and a process built for humans.
         </p>
 
@@ -70,7 +70,7 @@ function Hero() {
           <span className="hidden sm:inline">·</span>
           <span>18 Years Experience</span>
           <span className="hidden sm:inline">·</span>
-          <span>$1B+ Loans Originated</span>
+          <span>$800M+ Loans Originated</span>
           <span className="hidden sm:inline">·</span>
           <span>Equal Housing Opportunity</span>
         </div>
@@ -83,7 +83,7 @@ function Hero() {
 function TrustStrip() {
   const stats = [
     { n: '18', l: 'Years in the industry' },
-    { n: '$1B+', l: 'In home loans originated' },
+    { n: '$800M+', l: 'In home loans originated' },
     { n: '49', l: 'States licensed (not NY)' },
     { n: '24h', l: 'Pre-approval turnaround' },
   ];
