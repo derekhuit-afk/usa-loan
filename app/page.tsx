@@ -1,77 +1,187 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 const APPLY_URL = 'https://online.cardinalfinancial.com/#/p/apply/derekhuit';
 
+/* ------------------------ Licensing data ------------------------ */
+const LO_STATES: { abbr: string; name: string }[] = [
+  { abbr: 'AK', name: 'Alaska' },
+  { abbr: 'GA', name: 'Georgia' },
+  { abbr: 'IL', name: 'Illinois' },
+  { abbr: 'IN', name: 'Indiana' },
+  { abbr: 'MI', name: 'Michigan' },
+  { abbr: 'MT', name: 'Montana' },
+  { abbr: 'OK', name: 'Oklahoma' },
+  { abbr: 'TX', name: 'Texas' },
+  { abbr: 'WA', name: 'Washington' },
+];
+const LO_ABBRS = LO_STATES.map((s) => s.abbr);
+
+const ALL_STATES = [
+  'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA',
+  'HI','ID','IL','IN','IA','KS','KY','LA','ME','MD',
+  'MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
+  'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC',
+  'SD','TN','TX','UT','VT','VA','WA','WV','WI','WY',
+];
+
 /* ------------------------ NY ZIP detection ------------------------ */
-// NY ZIP codes span 005xx, 06390, 10xxx–14xxx. Quick range check.
 function isNYZip(zip: string): boolean {
   const z = zip.trim();
   if (!/^\d{5}$/.test(z)) return false;
   const n = parseInt(z, 10);
   if (z === '06390') return true; // Fishers Island, NY
   if (n >= 10001 && n <= 14975) return true;
-  if (n >= 501 && n <= 544) return true; // 005xx, Holtsville IRS range
+  if (n >= 501 && n <= 544) return true;
   return false;
+}
+
+/* ------------------------ Scroll reveal ------------------------ */
+function Reveal({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [shown, setShown] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setShown(true);
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            setShown(true);
+            obs.disconnect();
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  return (
+    <div
+      ref={ref}
+      className={`${className} transition-all duration-700 ease-out-quart will-change-transform ${
+        shown ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
+      }`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  );
+}
+
+/* ------------------------ Top bar ------------------------ */
+function TopBar() {
+  return (
+    <header className="sticky top-0 z-50 border-b border-cream/10 bg-navy/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
+        <a href="#top" className="flex items-baseline gap-1.5">
+          <span className="font-display text-xl font-semibold text-cream">USA</span>
+          <span className="font-display text-xl font-light text-gold">.loan</span>
+        </a>
+        <nav className="hidden items-center gap-8 text-[11px] font-semibold uppercase tracking-trackout text-cream/70 md:flex">
+          <a href="#programs" className="hover-underline hover:text-cream">Programs</a>
+          <a href="#licensing" className="hover-underline hover:text-cream">Licensing</a>
+          <a href="#guide" className="hover-underline hover:text-cream">Free guide</a>
+        </nav>
+        <a
+          href={APPLY_URL}
+          className="rounded-full border border-gold/60 px-5 py-2 text-[11px] font-semibold uppercase tracking-trackout text-gold transition-colors hover:bg-gold hover:text-navy"
+        >
+          Apply
+        </a>
+      </div>
+    </header>
+  );
 }
 
 /* ------------------------ Hero ------------------------ */
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy text-cream">
+    <section id="top" className="relative overflow-hidden bg-navy text-cream">
       <div className="grain pointer-events-none absolute inset-0 opacity-20" />
-      {/* Gold accent line */}
-      <div className="absolute left-0 top-0 h-full w-[2px] bg-gold/30 hidden md:block" />
+      <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full bg-gold/[0.07] blur-3xl" />
 
-      <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-10 md:px-10 md:pt-14 md:pb-36">
-        {/* Top bar */}
-        <div className="flex items-center justify-between pb-16 md:pb-24">
-          <div className="flex items-baseline gap-2">
-            <span className="font-display text-2xl font-semibold text-cream">USA</span>
-            <span className="font-display text-2xl font-light text-gold">.loan</span>
+      <div className="relative mx-auto grid max-w-6xl gap-14 px-6 pb-20 pt-16 md:grid-cols-12 md:px-10 md:pb-28 md:pt-24">
+        {/* Left: headline */}
+        <div className="md:col-span-7">
+          <p className="rise rise-1 mb-6 font-mono text-[11px] font-medium uppercase tracking-trackout text-gold">
+            Direct mortgage lending · Personally licensed in 9 states
+          </p>
+
+          <h1 className="rise rise-2 font-display text-[52px] leading-[1.02] tracking-tight text-cream md:text-[80px]">
+            Get pre-approved
+            <br />
+            <span className="italic text-gold">in minutes.</span>
+            <br />
+            Close in 30 days.
+          </h1>
+
+          <p className="rise rise-3 mt-8 max-w-xl text-lg leading-relaxed text-cream/80">
+            Straightforward home loans from a lender who&rsquo;s actually closed $800 million of them. No callback
+            games. No bait-and-switch. Just real numbers, fast answers, and a process built for humans.
+          </p>
+
+          <div className="rise rise-4 mt-10 flex flex-col gap-3 sm:flex-row">
+            <a href={APPLY_URL} className="btn-gold">
+              Start my application
+            </a>
+            <a href="#guide" className="btn-outline border-cream/30 text-cream hover:bg-cream hover:text-navy">
+              Get the free buyer guide
+            </a>
           </div>
-          <a href={APPLY_URL} className="text-[11px] font-semibold uppercase tracking-trackout text-cream/80 hover-underline">
-            Apply →
-          </a>
         </div>
 
-        {/* Eyebrow */}
-        <p className="rise rise-1 mb-6 text-[11px] font-semibold uppercase tracking-trackout text-gold">
-          Direct Mortgage Lending · Licensed in 49 states
-        </p>
+        {/* Right: credential card */}
+        <div className="rise rise-4 md:col-span-5">
+          <div className="rounded-2xl border border-cream/10 bg-cream/[0.04] p-7 backdrop-blur-sm md:p-8">
+            <p className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Your loan officer</p>
+            <p className="mt-2 font-display text-2xl font-medium text-cream">Derek Huit</p>
+            <p className="mt-1 font-mono text-sm text-gold">NMLS #203980</p>
 
-        {/* Headline */}
-        <h1 className="rise rise-2 display-hero font-display text-[56px] leading-[1.02] tracking-tight text-cream md:text-[84px]">
-          Get pre-approved<br />
-          <span className="italic text-gold">in minutes.</span><br />
-          Close in 30 days.
-        </h1>
+            <dl className="mt-6 grid grid-cols-2 gap-x-4 gap-y-5 border-t border-cream/10 pt-6">
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Experience</dt>
+                <dd className="mt-1 font-display text-2xl text-cream">18 yrs</dd>
+              </div>
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Originated</dt>
+                <dd className="mt-1 font-display text-2xl text-cream">$800M+</dd>
+              </div>
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Licensed states</dt>
+                <dd className="mt-1 font-display text-2xl text-cream">9</dd>
+              </div>
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Pre-approval</dt>
+                <dd className="mt-1 font-display text-2xl text-cream">24 hrs</dd>
+              </div>
+            </dl>
 
-        <p className="rise rise-3 mt-8 max-w-2xl text-lg leading-relaxed text-cream/80 md:text-xl">
-          Straightforward home loans from a lender who's actually closed $800 million of them. No callback games.
-          No bait-and-switch. Just real numbers, fast answers, and a process built for humans.
-        </p>
-
-        {/* Dual CTA */}
-        <div className="rise rise-4 mt-10 flex flex-col gap-3 sm:flex-row">
-          <a href={APPLY_URL} className="btn-gold">
-            Start my application
-          </a>
-          <a href="#guide" className="btn-outline border-cream/30 text-cream hover:bg-cream hover:text-navy">
-            Get the free buyer guide
-          </a>
+            <div className="mt-6 flex flex-wrap gap-1.5 border-t border-cream/10 pt-6">
+              {LO_ABBRS.map((s) => (
+                <span key={s} className="rounded-md bg-gold/15 px-2 py-1 font-mono text-[11px] font-medium text-gold">
+                  {s}
+                </span>
+              ))}
+            </div>
+            <a href="#licensing" className="hover-underline mt-4 inline-block text-xs text-cream/60 hover:text-cream">
+              Full licensing breakdown →
+            </a>
+          </div>
         </div>
+      </div>
 
-        {/* Meta */}
-        <div className="rise rise-4 mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-cream/10 pt-8 text-xs text-cream/60">
-          <span>Derek Huit · NMLS <span className="text-cream">#203980</span></span>
-          <span className="hidden sm:inline">·</span>
-          <span>18 Years Experience</span>
-          <span className="hidden sm:inline">·</span>
-          <span>$800M+ Loans Originated</span>
-          <span className="hidden sm:inline">·</span>
+      <div className="relative border-t border-cream/10">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-8 gap-y-2 px-6 py-4 font-mono text-[11px] text-cream/50 md:px-10">
+          <span>Derek Huit · NMLS #203980</span>
+          <span>Cardinal Financial · NMLS #66247</span>
           <span>Equal Housing Opportunity</span>
         </div>
       </div>
@@ -79,65 +189,51 @@ function Hero() {
   );
 }
 
-/* ------------------------ Trust Strip ------------------------ */
-function TrustStrip() {
-  const stats = [
-    { n: '18', l: 'Years in the industry' },
-    { n: '$800M+', l: 'In home loans originated' },
-    { n: '49', l: 'States licensed (not NY)' },
-    { n: '24h', l: 'Pre-approval turnaround' },
-  ];
-  return (
-    <section className="border-y border-navy/10 bg-cream">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-navy/10 md:grid-cols-4">
-        {stats.map((s) => (
-          <div key={s.l} className="px-6 py-8 text-center md:py-10">
-            <p className="font-display text-4xl font-semibold text-navy md:text-5xl">{s.n}</p>
-            <p className="mt-2 text-[11px] font-medium uppercase tracking-trackout text-navy/60">{s.l}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+/* ------------------------ Programs ------------------------ */
+const PROGRAMS = [
+  {
+    k: 'Purchase',
+    d: 'First home, move-up, or investment. FHA, Conventional 97, VA, and USDA programs. Down payments from 0% to 20%.',
+  },
+  {
+    k: 'Refinance',
+    d: 'Lower your rate, shorten your term, or pull equity to eliminate high-interest debt. Break-even analysis first — no waste.',
+  },
+  {
+    k: 'VA & Military',
+    d: 'Zero down, no PMI, and seller-paid closing costs. Active duty, veterans, and qualifying surviving spouses. No funding fee for disabled vets.',
+  },
+];
 
-/* ------------------------ Loan Paths ------------------------ */
-function LoanPaths() {
-  const paths = [
-    {
-      n: '01',
-      t: 'Purchase',
-      d: 'First home, move-up, or investment. FHA, Conventional 97, VA, and USDA programs. Down payments from 0% to 20%.',
-    },
-    {
-      n: '02',
-      t: 'Refinance',
-      d: 'Lower your rate, shorten your term, or pull equity to eliminate high-interest debt. Break-even analysis first — no waste.',
-    },
-    {
-      n: '03',
-      t: 'VA & Military',
-      d: 'Zero down, no PMI, and seller-paid closing costs. Active duty, veterans, and qualifying surviving spouses. No funding fee for disabled vets.',
-    },
-  ];
+function Programs() {
   return (
-    <section className="bg-cream py-20 md:py-28">
+    <section id="programs" className="bg-cream py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <p className="mb-4 text-[11px] font-semibold uppercase tracking-trackout text-gold-600">Ways to Work Together</p>
-        <h2 className="mb-14 max-w-2xl font-display text-4xl font-medium leading-tight text-navy md:text-5xl">
-          Whatever kind of loan you need — I've probably closed hundreds of them.
-        </h2>
+        <Reveal>
+          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-trackout text-gold-600">
+            Ways to work together
+          </p>
+          <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight text-navy md:text-5xl">
+            Whatever kind of loan you need — I&rsquo;ve probably closed hundreds of them.
+          </h2>
+        </Reveal>
 
-        <div className="grid gap-px bg-navy/10 md:grid-cols-3">
-          {paths.map((p) => (
-            <div key={p.n} className="flex flex-col bg-cream p-8 transition-colors hover:bg-white md:p-10">
-              <span className="mb-8 font-display text-xs font-medium tracking-trackout text-gold-600">{p.n}</span>
-              <h3 className="font-display text-2xl font-medium text-navy md:text-3xl">{p.t}</h3>
-              <p className="mt-4 text-[15px] leading-relaxed text-ink/70">{p.d}</p>
-              <a href={APPLY_URL} className="mt-8 inline-flex items-center gap-1.5 text-[12px] font-semibold uppercase tracking-trackout text-navy hover-underline">
-                Apply for {p.t.toLowerCase()} →
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-navy/10 bg-navy/10 md:grid-cols-3">
+          {PROGRAMS.map((p, i) => (
+            <Reveal key={p.k} delay={i * 90}>
+              <a
+                href={APPLY_URL}
+                className="group flex h-full flex-col justify-between gap-10 bg-cream p-8 transition-colors hover:bg-white md:p-10"
+              >
+                <div>
+                  <h3 className="font-display text-2xl font-medium text-navy">{p.k}</h3>
+                  <p className="mt-4 text-[15px] leading-relaxed text-ink/70">{p.d}</p>
+                </div>
+                <span className="font-mono text-xs font-medium uppercase tracking-trackout text-gold-600 transition-transform group-hover:translate-x-1">
+                  Apply for {p.k.toLowerCase()} →
+                </span>
               </a>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -145,11 +241,147 @@ function LoanPaths() {
   );
 }
 
-/* ------------------------ Lead Magnet (PDF opt-in) ------------------------ */
-function LeadMagnet() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', zip: '', loan_type: 'purchase' });
+/* ------------------------ Licensing ledger (signature) ------------------------ */
+function Licensing() {
+  return (
+    <section id="licensing" className="border-y border-navy/10 bg-white py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 md:px-10">
+        <Reveal>
+          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-trackout text-gold-600">
+            Licensing, in plain sight
+          </p>
+          <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight text-navy md:text-5xl">
+            Who&rsquo;s licensed where — exactly.
+          </h2>
+          <p className="mt-5 max-w-2xl text-ink/70">
+            Two licenses matter on every loan: your loan officer&rsquo;s and the lender&rsquo;s. Here are both of mine,
+            state by state, with links to verify each one at NMLS Consumer Access.
+          </p>
+        </Reveal>
+
+        <div className="mt-14 grid gap-6 lg:grid-cols-5">
+          {/* Loan officer card */}
+          <Reveal className="lg:col-span-2">
+            <div className="flex h-full flex-col rounded-2xl border border-navy/10 bg-cream p-7 md:p-8">
+              <p className="font-mono text-[10px] uppercase tracking-trackout text-ink/50">Loan officer</p>
+              <p className="mt-2 font-display text-2xl font-medium text-navy">Derek Huit</p>
+              <p className="mt-1 font-mono text-sm text-gold-600">NMLS #203980</p>
+              <p className="mt-5 text-sm leading-relaxed text-ink/70">
+                Personally licensed to originate mortgage loans in <strong className="text-navy">9 states</strong>:
+              </p>
+              <ul className="mt-4 grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+                {LO_STATES.map((s) => (
+                  <li key={s.abbr} className="flex items-center gap-2.5 text-sm text-ink">
+                    <span className="rounded bg-gold/20 px-1.5 py-0.5 font-mono text-[11px] font-semibold text-gold-600">
+                      {s.abbr}
+                    </span>
+                    {s.name}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/203980"
+                target="_blank"
+                rel="noopener"
+                className="hover-underline mt-auto pt-6 font-mono text-xs font-medium uppercase tracking-trackout text-navy"
+              >
+                Verify #203980 on NMLS →
+              </a>
+            </div>
+          </Reveal>
+
+          {/* Lender card + state grid */}
+          <Reveal className="lg:col-span-3" delay={90}>
+            <div className="flex h-full flex-col rounded-2xl border border-navy/10 bg-navy p-7 text-cream md:p-8">
+              <p className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Lender</p>
+              <p className="mt-2 font-display text-2xl font-medium">Cardinal Financial Company, LP</p>
+              <p className="mt-1 font-mono text-sm text-gold">NMLS #66247</p>
+              <p className="mt-5 text-sm leading-relaxed text-cream/70">
+                Licensed in <strong className="text-cream">49 states</strong> — every U.S. state except New York. Loans
+                I originate are funded and serviced through Cardinal.
+              </p>
+
+              <div className="mt-6 grid grid-cols-10 gap-1.5">
+                {ALL_STATES.map((s) => {
+                  const isNY = s === 'NY';
+                  const isMine = LO_ABBRS.includes(s);
+                  return (
+                    <span
+                      key={s}
+                      title={
+                        isNY
+                          ? 'New York — not licensed'
+                          : isMine
+                          ? `${s} — Cardinal licensed · Derek personally licensed`
+                          : `${s} — Cardinal licensed`
+                      }
+                      className={`flex items-center justify-center rounded-md py-1.5 font-mono text-[10px] font-medium ${
+                        isNY
+                          ? 'bg-transparent text-cream/25 line-through decoration-cream/40'
+                          : isMine
+                          ? 'bg-gold text-navy'
+                          : 'border border-cream/20 text-cream/70'
+                      }`}
+                    >
+                      {s}
+                    </span>
+                  );
+                })}
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] text-cream/60">
+                <span className="flex items-center gap-2">
+                  <span className="h-2.5 w-2.5 rounded-sm bg-gold" /> Derek + Cardinal
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="h-2.5 w-2.5 rounded-sm border border-cream/30" /> Cardinal only
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="text-cream/40 line-through">NY</span> Not licensed
+                </span>
+              </div>
+
+              <div className="mt-auto flex flex-wrap gap-x-8 gap-y-2 pt-6">
+                <a
+                  href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/66247"
+                  target="_blank"
+                  rel="noopener"
+                  className="hover-underline font-mono text-xs font-medium uppercase tracking-trackout text-cream"
+                >
+                  Verify #66247 on NMLS →
+                </a>
+                <a
+                  href="https://www.cardinalfinancial.com/nmls-licensing"
+                  target="_blank"
+                  rel="noopener"
+                  className="hover-underline font-mono text-xs font-medium uppercase tracking-trackout text-cream/70"
+                >
+                  Cardinal state licensing →
+                </a>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        <Reveal delay={140}>
+          <p className="mt-6 max-w-3xl text-xs leading-relaxed text-ink/50">
+            I personally originate loans in the nine states listed above. This site is not authorized by the New York
+            State Department of Financial Services, and no mortgage loan applications for properties located in New
+            York will be accepted through this site.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ------------------------ Guide + lead form ------------------------ */
+type Status = 'idle' | 'sending' | 'success' | 'error' | 'ny_blocked';
+
+function Guide() {
+  const [form, setForm] = useState({ name: '', email: '', phone: '', zip: '', loan_type: 'buying' });
   const [consent, setConsent] = useState({ terms: false, tcpa: false });
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error' | 'ny_blocked'>('idle');
+  const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
 
   const canSubmit =
@@ -172,7 +404,12 @@ function LeadMagnet() {
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, source: 'usa.loan/lead-magnet' }),
+        body: JSON.stringify({
+          ...form,
+          source: 'usa.loan/lead-magnet',
+          tcpa_consent: consent.tcpa,
+          terms_consent: consent.terms,
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Something went wrong.');
@@ -183,17 +420,24 @@ function LeadMagnet() {
     }
   }
 
+  const LOAN_TYPES = [
+    { v: 'buying', l: "I'm buying a home" },
+    { v: 'refinancing', l: "I'm refinancing" },
+    { v: 'va', l: "I'm using VA benefits" },
+    { v: 'exploring', l: 'Just exploring / not sure yet' },
+  ];
+
   return (
     <section id="guide" className="bg-navy py-20 text-cream md:py-28">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-5 md:px-10 md:gap-16">
-        {/* Left: pitch */}
-        <div className="md:col-span-2">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-trackout text-gold">Free Guide</p>
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-5 md:gap-16 md:px-10">
+        <Reveal className="md:col-span-2">
+          <p className="mb-4 font-mono text-[11px] font-medium uppercase tracking-trackout text-gold">Free guide</p>
           <h2 className="font-display text-4xl font-medium leading-tight md:text-5xl">
             The First-Time Homebuyer Playbook.
           </h2>
           <p className="mt-5 text-cream/70">
-            14 pages. No fluff. Everything you need to go from curious to closed — credit prep, pre-approval docs, the 28/36 rule, loan program comparison, real costs, the 30-day checklist.
+            14 pages. No fluff. Everything you need to go from curious to closed — credit prep, pre-approval docs, the
+            28/36 rule, loan program comparison, real costs, the 30-day checklist.
           </p>
           <ul className="mt-8 space-y-3 text-sm text-cream/80">
             <li className="flex gap-3"><span className="text-gold">→</span>The exact docs to gather before applying</li>
@@ -202,129 +446,119 @@ function LeadMagnet() {
             <li className="flex gap-3"><span className="text-gold">→</span>The 5 mistakes that kill first-time buyer deals</li>
             <li className="flex gap-3"><span className="text-gold">→</span>A printable 30-day pre-approval checklist</li>
           </ul>
-        </div>
+        </Reveal>
 
-        {/* Right: form */}
-        <div className="md:col-span-3">
+        <Reveal className="md:col-span-3" delay={90}>
           {status === 'success' ? (
-            <div className="bg-cream p-8 text-ink md:p-10">
-              <p className="text-[11px] font-semibold uppercase tracking-trackout text-gold-600">Delivered</p>
-              <h3 className="mt-3 font-display text-3xl font-medium text-navy">Your guide is on the way.</h3>
+            <div className="rounded-2xl bg-cream p-8 text-ink md:p-10">
+              <p className="font-mono text-[11px] font-medium uppercase tracking-trackout text-gold-600">Delivered</p>
+              <h3 className="mt-3 font-display text-3xl font-medium text-navy">Your guide is ready.</h3>
               <p className="mt-4 text-ink/70">
-                Check your email — the PDF link is in your inbox. I'll be in touch personally within 1 business hour.
+                Download it below. I&rsquo;ll be in touch personally within one business hour.
               </p>
               <a href="/guide.pdf" target="_blank" rel="noopener" className="btn-primary mt-6">
-                Or download it directly
+                Download the playbook
               </a>
             </div>
           ) : status === 'ny_blocked' ? (
-            <div className="bg-cream p-8 text-ink md:p-10">
-              <p className="text-[11px] font-semibold uppercase tracking-trackout text-gold-600">Important Notice</p>
-              <h3 className="mt-3 font-display text-3xl font-medium text-navy">We can't serve New York from this site.</h3>
-              <p className="mt-4 text-ink/70">
-                This site is not authorized by the New York State Department of Financial Services. No mortgage loan applications for properties located in the state of New York will be accepted through this site.
+            <div className="rounded-2xl bg-cream p-8 text-ink md:p-10">
+              <h3 className="font-display text-2xl font-medium text-navy">We can&rsquo;t serve New York.</h3>
+              <p className="mt-4 text-sm leading-relaxed text-ink/70">
+                This site is not authorized by the New York State Department of Financial Services. No mortgage loan
+                applications for properties located in the state of New York will be accepted through this site.
               </p>
-              <button onClick={() => { setStatus('idle'); setForm({ ...form, zip: '' }); }} className="btn-outline mt-6">
-                Update ZIP code
+              <button onClick={() => setStatus('idle')} className="btn-outline mt-6 border-navy/30 text-navy hover:bg-navy hover:text-cream">
+                Back
               </button>
             </div>
           ) : (
-            <form onSubmit={submit} className="bg-cream p-6 text-ink md:p-10">
+            <form onSubmit={submit} className="rounded-2xl bg-cream/[0.04] p-6 backdrop-blur-sm md:p-8">
               <div className="grid gap-4 sm:grid-cols-2">
-                <input
-                  className="field" type="text" placeholder="Full name" required
-                  value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
-                />
-                <input
-                  className="field" type="email" placeholder="Email address" required
-                  value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
-                />
-                <input
-                  className="field" type="tel" placeholder="Phone number" required
-                  value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                />
-                <input
-                  className="field" type="text" inputMode="numeric" pattern="\d{5}" maxLength={5} placeholder="Property ZIP" required
-                  value={form.zip} onChange={(e) => setForm({ ...form, zip: e.target.value.replace(/\D/g, '').slice(0, 5) })}
-                />
+                <input className="field-dark" placeholder="Full name" value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })} autoComplete="name" />
+                <input className="field-dark" placeholder="Email" type="email" value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })} autoComplete="email" />
+                <input className="field-dark" placeholder="Phone" type="tel" value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })} autoComplete="tel" />
+                <input className="field-dark" placeholder="Property ZIP" inputMode="numeric" maxLength={5} value={form.zip}
+                  onChange={(e) => setForm({ ...form, zip: e.target.value.replace(/\D/g, '') })} />
               </div>
 
-              <select
-                className="field mt-4"
-                value={form.loan_type}
-                onChange={(e) => setForm({ ...form, loan_type: e.target.value })}
-              >
-                <option value="purchase">I'm buying a home</option>
-                <option value="refi">I'm refinancing</option>
-                <option value="va">I'm using VA benefits</option>
-                <option value="exploring">Just exploring / not sure yet</option>
-              </select>
-
-              {/* Consent block */}
-              <div className="mt-6 space-y-3 text-[12px] leading-relaxed text-ink/70">
-                <label className="flex cursor-pointer items-start gap-3">
-                  <input
-                    type="checkbox"
-                    className="mt-0.5 h-4 w-4 flex-shrink-0 accent-navy"
-                    checked={consent.terms}
-                    onChange={(e) => setConsent({ ...consent, terms: e.target.checked })}
-                  />
-                  <span>
-                    I agree to the <Link href="/privacy" className="underline">Privacy Policy</Link> and <Link href="/terms" className="underline">Terms of Use</Link>.
-                  </span>
-                </label>
-                <label className="flex cursor-pointer items-start gap-3">
-                  <input
-                    type="checkbox"
-                    className="mt-0.5 h-4 w-4 flex-shrink-0 accent-navy"
-                    checked={consent.tcpa}
-                    onChange={(e) => setConsent({ ...consent, tcpa: e.target.checked })}
-                  />
-                  <span>
-                    By submitting, I agree to receive calls, texts (including autodialed and prerecorded messages), and emails from Derek Huit and Cardinal Financial Company, Limited Partnership regarding mortgage products at the number and email provided. Consent is not a condition of any purchase. Message and data rates may apply. Reply STOP to opt out.
-                  </span>
-                </label>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {LOAN_TYPES.map((t) => (
+                  <button
+                    key={t.v}
+                    type="button"
+                    onClick={() => setForm({ ...form, loan_type: t.v })}
+                    className={`rounded-full border px-4 py-2 font-mono text-xs transition-colors ${
+                      form.loan_type === t.v
+                        ? 'border-gold bg-gold text-navy'
+                        : 'border-cream/25 text-cream/70 hover:border-cream/50'
+                    }`}
+                  >
+                    {t.l}
+                  </button>
+                ))}
               </div>
 
-              <button type="submit" className="btn-primary mt-6 w-full" disabled={!canSubmit || status === 'sending'}>
+              <label className="mt-6 flex items-start gap-3 text-xs leading-relaxed text-cream/70">
+                <input type="checkbox" checked={consent.terms} onChange={(e) => setConsent({ ...consent, terms: e.target.checked })}
+                  className="mt-0.5 h-4 w-4 shrink-0 accent-[#C9A962]" />
+                <span>
+                  I agree to the <Link href="/privacy" className="underline">Privacy Policy</Link> and{' '}
+                  <Link href="/terms" className="underline">Terms of Use</Link>.
+                </span>
+              </label>
+              <label className="mt-3 flex items-start gap-3 text-xs leading-relaxed text-cream/70">
+                <input type="checkbox" checked={consent.tcpa} onChange={(e) => setConsent({ ...consent, tcpa: e.target.checked })}
+                  className="mt-0.5 h-4 w-4 shrink-0 accent-[#C9A962]" />
+                <span>
+                  By submitting, I agree to receive calls, texts (including autodialed and prerecorded messages), and
+                  emails from Derek Huit and Cardinal Financial Company, Limited Partnership regarding mortgage products
+                  at the number and email provided. Consent is not a condition of any purchase. Message and data rates
+                  may apply. Reply STOP to opt out.
+                </span>
+              </label>
+
+              {status === 'error' && <p className="mt-4 text-sm text-red-300">{errorMsg}</p>}
+
+              <button type="submit" disabled={!canSubmit || status === 'sending'} className="btn-gold mt-6 w-full disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto">
                 {status === 'sending' ? 'Sending…' : 'Send me the guide'}
               </button>
-
-              {status === 'error' && (
-                <p className="mt-4 text-sm text-red-700">{errorMsg || 'Something went wrong. Please try again.'}</p>
-              )}
             </form>
           )}
-        </div>
+        </Reveal>
       </div>
     </section>
   );
 }
 
-/* ------------------------ How It Works ------------------------ */
-function HowItWorks() {
-  const steps = [
-    { n: '01', t: 'Apply', d: 'Ten-minute online application. Soft credit pull, secure document upload.' },
-    { n: '02', t: 'Review', d: 'I personally review every file — same day. You get a real pre-approval letter within 24 business hours.' },
-    { n: '03', t: 'Close', d: 'Cardinal Financial underwriting on the Octane platform. Most purchases close in 21–30 days.' },
-  ];
+/* ------------------------ Process ------------------------ */
+const STEPS = [
+  { t: 'Apply', d: 'Ten-minute online application. Soft credit pull, secure document upload.' },
+  { t: 'Review', d: 'I personally review every file — same day. You get a real pre-approval letter within 24 business hours.' },
+  { t: 'Close', d: 'Cardinal Financial underwriting on the Octane platform. Most purchases close in 21–30 days.' },
+];
+
+function Process() {
   return (
     <section className="bg-cream py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <p className="mb-4 text-[11px] font-semibold uppercase tracking-trackout text-gold-600">The Process</p>
-        <h2 className="mb-14 max-w-2xl font-display text-4xl font-medium leading-tight text-navy md:text-5xl">
-          Three steps. One loan officer. Zero runaround.
-        </h2>
-        <div className="grid gap-10 md:grid-cols-3 md:gap-16">
-          {steps.map((s, i) => (
-            <div key={s.n} className="relative">
-              {i < 2 && <div className="absolute left-0 top-6 hidden h-px w-full bg-navy/20 md:block" />}
-              <div className="relative flex items-center gap-4">
-                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center border border-navy bg-cream font-display text-sm font-medium text-navy">{s.n}</span>
-                <h3 className="font-display text-2xl font-medium text-navy">{s.t}</h3>
+        <Reveal>
+          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-trackout text-gold-600">The process</p>
+          <h2 className="font-display text-4xl font-medium leading-tight text-navy md:text-5xl">
+            Three steps. One loan officer. Zero runaround.
+          </h2>
+        </Reveal>
+        <div className="mt-14 grid gap-10 md:grid-cols-3">
+          {STEPS.map((s, i) => (
+            <Reveal key={s.t} delay={i * 90}>
+              <div className="border-t-2 border-navy pt-6">
+                <span className="font-mono text-xs font-medium text-gold-600">0{i + 1}</span>
+                <h3 className="mt-2 font-display text-2xl font-medium text-navy">{s.t}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-ink/70">{s.d}</p>
               </div>
-              <p className="mt-5 text-[15px] leading-relaxed text-ink/70">{s.d}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -335,106 +569,95 @@ function HowItWorks() {
 /* ------------------------ Final CTA ------------------------ */
 function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-navy py-24 text-cream md:py-32">
-      <div className="grain pointer-events-none absolute inset-0 opacity-20" />
-      <div className="relative mx-auto max-w-4xl px-6 text-center md:px-10">
-        <p className="mb-5 text-[11px] font-semibold uppercase tracking-trackout text-gold">Ready when you are</p>
-        <h2 className="font-display text-4xl font-medium leading-tight md:text-6xl">
-          Start your application<br />
-          <span className="italic text-gold">in the next ten minutes.</span>
-        </h2>
-        <p className="mx-auto mt-6 max-w-xl text-cream/70 md:text-lg">
-          Soft credit pull. Real pre-approval. No obligation. If I can't get you qualified, I'll tell you exactly what to work on and when to come back.
-        </p>
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a href={APPLY_URL} className="btn-gold">
-            Start my application
-          </a>
-          <a href="#guide" className="text-[12px] font-semibold uppercase tracking-trackout text-cream/80 hover-underline">
-            Or grab the free guide first →
-          </a>
-        </div>
+    <section className="border-t border-navy/10 bg-white py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 text-center md:px-10">
+        <Reveal>
+          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-trackout text-gold-600">Ready when you are</p>
+          <h2 className="mx-auto max-w-3xl font-display text-4xl font-medium leading-tight text-navy md:text-6xl">
+            Start your application in the next ten minutes.
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-ink/70">
+            Soft credit pull. Real pre-approval. No obligation. If I can&rsquo;t get you qualified, I&rsquo;ll tell you
+            exactly what to work on and when to come back.
+          </p>
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href={APPLY_URL} className="btn-primary">Start my application</a>
+            <a href="#guide" className="hover-underline text-sm font-medium text-navy">Or grab the free guide first →</a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
 }
 
-/* ------------------------ Footer (compliance) ------------------------ */
+/* ------------------------ Footer ------------------------ */
 function Footer() {
   return (
-    <footer className="bg-ink py-14 text-cream/70">
+    <footer className="bg-navy py-16 text-cream">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-12 md:grid-cols-3">
           <div>
-            <div className="flex items-baseline gap-2">
-              <span className="font-display text-2xl font-semibold text-cream">USA</span>
-              <span className="font-display text-2xl font-light text-gold">.loan</span>
+            <div className="flex items-baseline gap-1.5">
+              <span className="font-display text-xl font-semibold">USA</span>
+              <span className="font-display text-xl font-light text-gold">.loan</span>
             </div>
-            <p className="mt-4 text-xs leading-relaxed">
-              Direct mortgage lending from a 18-year industry veteran. Straightforward terms, fast closings, no bait-and-switch.
+            <p className="mt-4 text-sm leading-relaxed text-cream/60">
+              Direct mortgage lending from an 18-year industry veteran. Straightforward terms, fast closings, no
+              bait-and-switch.
+            </p>
+            <p className="mt-5 font-mono text-xs text-cream/70">Derek Huit · NMLS #203980</p>
+            <p className="mt-1 font-mono text-xs text-cream/50">
+              Licensed in: AK · GA · IL · IN · MI · MT · OK · TX · WA
             </p>
           </div>
-
-          <div className="text-xs leading-relaxed">
-            <p className="mb-2 font-semibold uppercase tracking-trackout text-cream">Derek Huit · NMLS #203980</p>
-            <p>Powered by <strong className="text-cream/90">Cardinal Financial Company, Limited Partnership</strong></p>
-            <p>Company NMLS #66247</p>
-            <p>3701 Arco Corporate Drive, Suite 200</p>
-            <p>Charlotte, NC 28273</p>
-            <p className="mt-3">
-              <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/66247" target="_blank" rel="noopener" className="underline">
-                NMLS Consumer Access →
-              </a>
-            </p>
-            <p className="mt-1">
-              <a href="https://www.cardinalfinancial.com/nmls-licensing" target="_blank" rel="noopener" className="underline">
-                State licensing information →
-              </a>
-            </p>
+          <div className="text-sm text-cream/60">
+            <p className="font-mono text-[10px] uppercase tracking-trackout text-cream/40">Lender</p>
+            <p className="mt-3 text-cream/80">Cardinal Financial Company, Limited Partnership</p>
+            <p className="mt-1 font-mono text-xs">Company NMLS #66247 · Licensed in 49 states (not NY)</p>
+            <p className="mt-3">3701 Arco Corporate Drive, Suite 200<br />Charlotte, NC 28273</p>
+            <div className="mt-4 flex flex-col gap-1.5">
+              <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/66247" target="_blank" rel="noopener" className="hover-underline w-fit text-cream/70 hover:text-cream">NMLS Consumer Access →</a>
+              <a href="https://www.cardinalfinancial.com/nmls-licensing" target="_blank" rel="noopener" className="hover-underline w-fit text-cream/70 hover:text-cream">State licensing information →</a>
+            </div>
           </div>
-
-          <div className="text-xs leading-relaxed">
-            <p className="mb-2 font-semibold uppercase tracking-trackout text-cream">Legal</p>
-            <ul className="space-y-1.5">
-              <li><Link href="/privacy" className="hover:text-cream">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-cream">Terms of Use</Link></li>
-              <li><a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/203980" target="_blank" rel="noopener" className="hover:text-cream">Verify my NMLS ID →</a></li>
-            </ul>
+          <div className="text-sm text-cream/60">
+            <p className="font-mono text-[10px] uppercase tracking-trackout text-cream/40">Legal</p>
+            <div className="mt-3 flex flex-col gap-1.5">
+              <Link href="/privacy" className="hover-underline w-fit hover:text-cream">Privacy Policy</Link>
+              <Link href="/terms" className="hover-underline w-fit hover:text-cream">Terms of Use</Link>
+              <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/203980" target="_blank" rel="noopener" className="hover-underline w-fit hover:text-cream">Verify my NMLS ID →</a>
+            </div>
           </div>
         </div>
 
-        {/* Compliance block */}
-        <div className="mt-12 border-t border-cream/10 pt-8 text-[11px] leading-relaxed text-cream/60">
-          <p className="mb-3">
-            <span className="inline-flex items-center gap-2">
-              <span className="inline-block h-4 w-4 border border-cream/60 bg-transparent" title="Equal Housing Opportunity">⌂</span>
-              Equal Housing Opportunity.
-            </span>{' '}
-            Cardinal Financial Company, Limited Partnership holds state licenses as described at{' '}
-            <a href="https://www.cardinalfinancial.com/nmls-licensing" target="_blank" rel="noopener" className="underline">cardinalfinancial.com/nmls-licensing</a>.
+        <div className="mt-12 border-t border-cream/10 pt-8 text-xs leading-relaxed text-cream/40">
+          <p>
+            ⌂ Equal Housing Opportunity. Derek Huit, NMLS #203980, is licensed in Alaska, Georgia, Illinois, Indiana,
+            Michigan, Montana, Oklahoma, Texas, and Washington. Cardinal Financial Company, Limited Partnership, NMLS
+            #66247, holds state licenses as described at cardinalfinancial.com/nmls-licensing. This site is not
+            authorized by the New York State Department of Financial Services. No mortgage loan applications for
+            properties located in the state of New York will be accepted through this site.
           </p>
-          <p className="mb-3">
-            <strong className="text-cream/80">This site is not authorized by the New York State Department of Financial Services.</strong> No mortgage loan applications for properties located in the state of New York will be accepted through this site.
+          <p className="mt-4">
+            This is not a commitment to lend. All loans subject to credit approval, underwriting, and appraisal. Rates,
+            terms, and programs are subject to change at any time without notice. Not all applicants will qualify.
           </p>
-          <p className="mb-3">
-            This is not a commitment to lend. All loans subject to credit approval, underwriting, and appraisal. Rates, terms, and programs are subject to change without notice. Not all applicants will qualify. Loan programs, rates, and terms are subject to change at any time without notice.
-          </p>
-          <p>© {new Date().getFullYear()} Huitai LLC. All rights reserved. USA.loan is a marketing site operated by Huitai LLC.</p>
+          <p className="mt-4">© 2026 Huitai LLC. All rights reserved. USA.loan is a marketing site operated by Huitai LLC.</p>
         </div>
       </div>
     </footer>
   );
 }
 
-/* ------------------------ Page ------------------------ */
-export default function HomePage() {
+export default function Page() {
   return (
     <main>
+      <TopBar />
       <Hero />
-      <TrustStrip />
-      <LoanPaths />
-      <LeadMagnet />
-      <HowItWorks />
+      <Programs />
+      <Licensing />
+      <Guide />
+      <Process />
       <FinalCTA />
       <Footer />
     </main>

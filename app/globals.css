@@ -20,7 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle noise texture for cream backgrounds */
+/* Subtle noise texture */
 .grain {
   position: relative;
 }
@@ -34,7 +34,7 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0 0.05  0 0 0 0.045 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Reveal on load */
+/* Reveal on load (hero only) */
 @keyframes rise {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
@@ -45,7 +45,13 @@ body {
 .rise-3 { animation-delay: 0.28s; }
 .rise-4 { animation-delay: 0.38s; }
 
-/* Underline-on-hover for links */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise { animation: none; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* Underline-on-hover */
 .hover-underline {
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
@@ -55,27 +61,24 @@ body {
 }
 .hover-underline:hover { background-size: 100% 1px; }
 
-/* Form field base */
-.field {
-  @apply w-full rounded-none border border-navy/15 bg-white px-4 py-3.5 text-[15px] text-ink placeholder:text-navy/40 focus:border-navy focus:outline-none transition-colors;
-}
-
-.btn-primary {
-  @apply inline-flex items-center justify-center gap-2 bg-navy px-6 py-3.5 text-[14px] font-semibold uppercase tracking-trackout text-cream hover:bg-ink transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
-}
-
+/* Buttons */
 .btn-gold {
-  @apply inline-flex items-center justify-center gap-2 bg-gold px-6 py-3.5 text-[14px] font-semibold uppercase tracking-trackout text-navy hover:bg-gold-600 transition-colors;
+  @apply inline-flex items-center justify-center rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-navy transition-all hover:bg-gold-200 hover:shadow-lg hover:shadow-gold/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
 }
-
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-cream transition-all hover:bg-navy-700 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy;
+}
 .btn-outline {
-  @apply inline-flex items-center justify-center gap-2 border border-navy/30 px-6 py-3.5 text-[14px] font-semibold uppercase tracking-trackout text-navy hover:bg-navy hover:text-cream transition-colors;
+  @apply inline-flex items-center justify-center rounded-full border px-7 py-3.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current;
 }
 
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .display-hero { font-size: clamp(2.25rem, 10vw, 3.75rem); line-height: 1.05; }
+/* Form fields */
+.field {
+  @apply w-full rounded-lg border border-navy/15 bg-white px-4 py-3.5 text-[15px] text-ink placeholder:text-navy/40 focus:border-navy focus:outline-none transition-colors;
 }
-@media (max-width: 420px) {
-  .display-hero { font-size: 2rem; }
+.field-dark {
+  @apply w-full rounded-lg border border-cream/20 bg-navy-900/40 px-4 py-3.5 text-[15px] text-cream placeholder:text-cream/40 focus:border-gold focus:outline-none transition-colors;
 }
+
+/* Easing */
+.ease-out-quart { transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1); }

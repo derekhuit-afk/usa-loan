@@ -15,6 +15,7 @@ const config: Config = {
       fontFamily: {
         display: ['var(--font-display)', 'ui-serif', 'Georgia', 'serif'],
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       letterSpacing: {
         trackout: '0.18em',

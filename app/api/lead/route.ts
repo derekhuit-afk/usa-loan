@@ -31,6 +31,8 @@ export async function POST(req: NextRequest) {
     const zip = (body.zip || '').toString().trim();
     const loan_type = (body.loan_type || 'exploring').toString().slice(0, 40);
     const source = (body.source || 'usa.loan').toString().slice(0, 120);
+    const tcpa_consent = body.tcpa_consent === true;
+    const terms_consent = body.terms_consent === true;
 
     // Validation
     if (!name || name.length < 2) {
@@ -45,6 +47,9 @@ export async function POST(req: NextRequest) {
     }
     if (!/^\d{5}$/.test(zip)) {
       return NextResponse.json({ error: 'Valid 5-digit ZIP required.' }, { status: 400 });
+    }
+    if (!tcpa_consent || !terms_consent) {
+      return NextResponse.json({ error: 'Please check both consent boxes to continue.' }, { status: 400 });
     }
     if (isNYZip(zip)) {
       return NextResponse.json(
@@ -73,8 +78,9 @@ export async function POST(req: NextRequest) {
         source,
         ip_address: ip,
         user_agent: userAgent,
-        tcpa_consent: true,
-        terms_consent: true,
+        tcpa_consent,
+        terms_consent,
+        consent_timestamp: new Date().toISOString(),
       });
       if (error) {
         console.error('[lead] Supabase insert error:', error.message);
@@ -85,7 +91,7 @@ export async function POST(req: NextRequest) {
       console.error('[lead] Supabase error:', err);
     }
 
-    // Fire SMS alert to Derek via Twilio
+    // Fire SMS alert via Twilio when configured
     let smsOk = false;
     const smsEnabled = !!(
       process.env.TWILIO_ACCOUNT_SID &&
@@ -108,7 +114,14 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Always succeed to user if validation passed — delivery is ops concern
+    // If persistence failed, surface it — a silently dropped lead is worse than a retry prompt
+    if (!supabaseOk) {
+      return NextResponse.json(
+        { error: 'We could not save your request. Please try again or email derekhuit@gmail.com directly.' },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json({
       ok: true,
       guide_url: '/guide.pdf',
