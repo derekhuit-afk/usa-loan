@@ -124,7 +124,7 @@ function Hero() {
           </h1>
 
           <p className="rise rise-3 mt-8 max-w-xl text-lg leading-relaxed text-cream/80">
-            Straightforward home loans from a lender who&rsquo;s actually closed $800 million of them. No callback
+            Straightforward home loans from a lender who&rsquo;s actually closed hundreds of millions in volume. No callback
             games. No bait-and-switch. Just real numbers, fast answers, and a process built for humans.
           </p>
 
@@ -152,7 +152,7 @@ function Hero() {
               </div>
               <div>
                 <dt className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Originated</dt>
-                <dd className="mt-1 font-display text-2xl text-cream">$800M+</dd>
+                <dd className="mt-1 font-display text-lg leading-snug text-cream">Hundreds of millions</dd>
               </div>
               <div>
                 <dt className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Licensed states</dt>

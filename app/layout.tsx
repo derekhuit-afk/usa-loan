@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://usa.loan'),
   title: 'USA.loan — Get Pre-Approved in Minutes | Derek Huit, NMLS #203980',
   description:
-    'Direct mortgage lending from Derek Huit, NMLS #203980, personally licensed in AK, GA, IL, IN, MI, MT, OK, TX & WA. 18 years, $800M+ originated. Loans through Cardinal Financial, NMLS #66247, licensed in 49 states.',
+    'Direct mortgage lending from Derek Huit, NMLS #203980, personally licensed in AK, GA, IL, IN, MI, MT, OK, TX & WA. 18 years, hundreds of millions closed. Loans through Cardinal Financial, NMLS #66247, licensed in 49 states.',
   keywords: [
     'mortgage',
     'home loan',
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'USA.loan — Get Pre-Approved in Minutes',
     description:
-      '18 years. $800M+ originated. Direct home loans from Derek Huit, NMLS #203980, personally licensed in 9 states.',
+      '18 years. Hundreds of millions closed. Direct home loans from Derek Huit, NMLS #203980, personally licensed in 9 states.',
     url: 'https://usa.loan',
     siteName: 'USA.loan',
     type: 'website',
