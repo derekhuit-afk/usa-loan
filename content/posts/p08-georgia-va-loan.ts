@@ -102,6 +102,7 @@ export const post: Post = {
     { label: "Georgia state overview", href: "/states/georgia" },
     { label: "VA loan program details", href: "/programs/va" },
     { label: "First-time buyer programs", href: "/programs/first-time-buyer" },
+    { label: "Georgia first-time buyer guide", href: "/learn/georgia-first-time-homebuyer-guide-2026" },
     { label: "Start your pre-qualification", href: "https://online.cardinalfinancial.com/#/p/apply/derekhuit" },
   ],
 };
