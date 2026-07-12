@@ -10,10 +10,19 @@ import { post as p08 } from "./p08-georgia-va-loan";
 import { post as p09 } from "./p09-georgia-first-time-buyer";
 import { post as p10 } from "./p10-michigan-mshda-dpa";
 import { post as p11 } from "./p11-michigan-dscr";
+import { post as p12 } from "./p12-illinois-ihda-first-time-buyer";
+import { post as p13 } from "./p13-great-lakes-naval-station-va-loan";
+import { post as p14 } from "./p14-indianapolis-dscr-investor-guide";
+import { post as p15 } from "./p15-indiana-va-loan-fort-benjamin-harrison";
+import { post as p16 } from "./p16-malmstrom-afb-va-loan-montana";
+import { post as p17 } from "./p17-montana-usda-rural-home-loan";
+import { post as p18 } from "./p18-tinker-afb-fort-sill-va-loan-oklahoma";
+import { post as p19 } from "./p19-oklahoma-city-dscr-investor-guide";
 
-export const POSTS: Post[] = [p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11].sort(
-  (a, b) => (a.publishDate < b.publishDate ? -1 : 1)
-);
+export const POSTS: Post[] = [
+  p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11,
+  p12, p13, p14, p15, p16, p17, p18, p19,
+].sort((a, b) => (a.publishDate < b.publishDate ? -1 : 1));
 
 export function getPost(slug: string): Post | undefined {
   return POSTS.find((p) => p.slug === slug);
