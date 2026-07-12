@@ -89,9 +89,9 @@ export const post: Post = {
     rows: [
       ["Typical purchase price", "$285,000–$395,000 SFR", "Tampa $385K+ · Miami $725K+"],
       ["Typical market rent", "$2,200–$2,800", "Tampa $2,650 · Miami $4,200"],
-      ["Gross rental yield", "~9.8% (Mandarin)", "Tampa ~8.3% · Miami ~7.0%"],
+      ["Gross rental yield", "~10% gross yield (Mandarin)", "Tampa ~8% · Miami ~7% gross yield"],
       ["Typical DSCR at 80% LTV", "1.10–1.35x", "Tampa 0.90–1.10x · Miami often sub-1.0x"],
-      ["Duval County effective tax rate", "~1.3% (lowest major FL metro)", "Hillsborough ~1.45%+"],
+      ["Duval County effective tax rate", "~1.3 percent (lowest major FL metro)", "Hillsborough ~1.45 percent+"],
       ["Military tenant anchor", "NAS Jacksonville + Mayport", "No equivalent concentration"],
     ],
   },
