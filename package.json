@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:pdf": "python scripts/build_pdf.py public/guide.pdf"
+    "build:pdf": "python scripts/build_pdf.py public/guide.pdf",
+    "prebuild": "node scripts/lint_content.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.47.0",
