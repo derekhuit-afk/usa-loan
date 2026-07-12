@@ -77,13 +77,13 @@ export const post: Post = {
     heading: "JBLM-area communities: commute, price, and buyer profile",
     intro:
       "Commute times are approximate to JBLM Lewis main gate. Prices are representative ranges for 2026 — verify current market conditions before making purchase decisions.",
-    columns: ["Community / county", "Buyer profile and tradeoffs"],
+    columns: ["Drive to Lewis gate", "Best for"],
     rows: [
-      ["Lakewood, Pierce County — 5–15 min", "Closest to Lewis main gate; military-dense buyer pool; accessible pricing; strong resale liquidity"],
-      ["DuPont, Pierce County — 5–10 min", "Planned community; preferred by McChord personnel; newer construction; higher price per sq ft"],
-      ["Tacoma, Pierce County — 20–35 min", "Broadest inventory; urban amenities; median ~$510K; longer commute for most JBLM assignments"],
-      ["Lacey / Olympia, Thurston County — 10–25 min", "Lower property tax rate (approx 0.93 vs 1.07 percent); newer construction; cross-county play; I-5 commute"],
-      ["Spanaway / Graham, Pierce County — 15–25 min", "Larger lots; lower price per sq ft; longer commute; popular for space-prioritizing buyers"],
+      ["Lakewood, Pierce County", "5–15 min", "Military-dense buyer pool; accessible pricing; strong resale liquidity"],
+      ["DuPont, Pierce County", "5–10 min", "McChord personnel; planned community; newer construction; premium per sq ft"],
+      ["Tacoma, Pierce County", "20–35 min", "Broadest inventory; urban amenities; median around $510K; longer commute"],
+      ["Lacey / Olympia, Thurston County", "10–25 min via I-5", "Lower property tax rate; newer construction; cross-county value play"],
+      ["Spanaway / Graham, Pierce County", "15–25 min", "Larger lots; lower price per sq ft; buyers prioritizing space over commute"],
     ],
   },
   faq: [
