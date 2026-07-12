@@ -28,14 +28,14 @@ export const post: Post = {
     ],
   },
   hook: [
-    "Indianapolis appears on institutional investor screening lists for a reason that does not require a complex thesis: at median acquisition prices around $245,000, median SFR asking rents near $1,650 monthly, and Indiana's effective property tax rate of 0.85 percent, the math produces gross yields near 10 percent. That yield, at standard DSCR qualification thresholds, means well-selected properties qualify at 1.10 to 1.30 coverage ratios without requiring optimistic rent projections or appreciation assumptions.",
+    "Indianapolis appears on institutional investor screening lists for a reason that does not require a complex thesis: at median acquisition prices around $245,000, median SFR asking rents near that figure, and Indiana's effective property tax rate of 0.85 percent, the math produces gross yields near 10 percent. That yield, at standard DSCR qualification thresholds, means well-selected properties qualify at 1.10 to 1.30 coverage ratios without requiring optimistic rent projections or appreciation assumptions.",
     "Indianapolis is a cash-flow market. It is not an appreciation story. That distinction matters for how you underwrite deals and how you think about DSCR qualification. The property needs to work today on what it earns today — and in Indianapolis, that is a realistic standard in the right submarkets.",
   ],
   sections: [
     {
       heading: "Why Indiana's property tax rate changes DSCR math",
       paragraphs: [
-        "Property taxes are the most underestimated DSCR variable when investors from high-tax states model Indianapolis deals. Indiana's effective property tax rate statewide runs near 0.85 percent of assessed value — compared to 2.5 to 3.5 percent in Cook County Illinois, 1.5 to 2.5 percent in Michigan, or 1.8 to 2.3 percent in Texas. On a $245,000 Indianapolis property, the annual tax obligation is approximately $2,082 — about $174 monthly. That single variable shifts the DSCR ratio measurably relative to the same deal in a higher-tax state.",
+        "Property taxes are the most underestimated DSCR variable when investors from high-tax states model Indianapolis deals. Indiana's effective property tax rate statewide runs near 0.85 percent of assessed value — compared to 2.5 to 3.5 percent in Cook County Illinois, 1.5 to 2.5 percent in Michigan, or 1.8 to 2.3 percent in Texas. On a $245,000 Indianapolis property, the annual tax obligation is approximately $2,082 — about that figure. That single variable shifts the DSCR ratio measurably relative to the same deal in a higher-tax state.",
         "Marion County, which includes Indianapolis proper, runs near 0.85 percent. Hamilton County (Fishers, Carmel, Noblesville) runs slightly higher at 0.95 to 1.10 percent but still well below the national average. This is the most important number in Indianapolis DSCR modeling after acquisition price and rent — get it right before running final ratios.",
       ],
     },
