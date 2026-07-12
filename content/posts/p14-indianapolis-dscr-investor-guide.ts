@@ -28,14 +28,14 @@ export const post: Post = {
     ],
   },
   hook: [
-    "Indianapolis appears on institutional investor screening lists for a reason that does not require a complex thesis: at median acquisition prices around $245,000, median SFR asking rents near $1,650 per month, and Indiana's effective property tax rate of 0.85 percent, the math produces gross yields near 10 percent. That yield, at standard DSCR qualification thresholds, means well-selected properties qualify at 1.10 to 1.30 coverage ratios without requiring optimistic rent projections or appreciation assumptions.",
+    "Indianapolis appears on institutional investor screening lists for a reason that does not require a complex thesis: at median acquisition prices around $245,000, median SFR asking rents near $1,650 monthly, and Indiana's effective property tax rate of 0.85 percent, the math produces gross yields near 10 percent. That yield, at standard DSCR qualification thresholds, means well-selected properties qualify at 1.10 to 1.30 coverage ratios without requiring optimistic rent projections or appreciation assumptions.",
     "Indianapolis is a cash-flow market. It is not an appreciation story. That distinction matters for how you underwrite deals and how you think about DSCR qualification. The property needs to work today on what it earns today — and in Indianapolis, that is a realistic standard in the right submarkets.",
   ],
   sections: [
     {
       heading: "Why Indiana's property tax rate changes DSCR math",
       paragraphs: [
-        "Property taxes are the most underestimated DSCR variable when investors from high-tax states model Indianapolis deals. Indiana's effective property tax rate statewide runs near 0.85 percent of assessed value — compared to 2.5 to 3.5 percent in Cook County Illinois, 1.5 to 2.5 percent in Michigan, or 1.8 to 2.3 percent in Texas. On a $245,000 Indianapolis property, the annual tax obligation is approximately $2,082 — about $174 per month. That single variable shifts the DSCR ratio measurably relative to the same deal in a higher-tax state.",
+        "Property taxes are the most underestimated DSCR variable when investors from high-tax states model Indianapolis deals. Indiana's effective property tax rate statewide runs near 0.85 percent of assessed value — compared to 2.5 to 3.5 percent in Cook County Illinois, 1.5 to 2.5 percent in Michigan, or 1.8 to 2.3 percent in Texas. On a $245,000 Indianapolis property, the annual tax obligation is approximately $2,082 — about $174 monthly. That single variable shifts the DSCR ratio measurably relative to the same deal in a higher-tax state.",
         "Marion County, which includes Indianapolis proper, runs near 0.85 percent. Hamilton County (Fishers, Carmel, Noblesville) runs slightly higher at 0.95 to 1.10 percent but still well below the national average. This is the most important number in Indianapolis DSCR modeling after acquisition price and rent — get it right before running final ratios.",
       ],
     },
@@ -52,6 +52,7 @@ export const post: Post = {
       paragraphs: [
         "DSCR lenders calculating ratios on Indianapolis properties use market rent appraisals or executed leases for the income figure. The expense side — principal, interest, taxes, insurance, and HOA if applicable — uses the purchase contract price, current rate, the county's actual tax assessment, and an insurance quote appropriate to Indiana's climate exposure. Indiana is not a hurricane or wildfire state; insurance premiums run $1,200 to $1,800 annually for a standard SFR, which at monthly average adds $100 to $150 to the housing obligation.",
         "Most standard DSCR programs require a 1.0 minimum ratio. Some programs allow 0.75 to 0.99 coverage at slightly higher rates, useful for properties that fall just below the threshold on current rents with clear upside. Minimum credit scores typically run 640 to 680 depending on LTV and reserve requirements. Most Indianapolis DSCR deals close with 20 to 25 percent down, 6 months of reserves in liquid accounts post-close, and a property management plan for remote investors.",
+        "Reserve requirements in dollar terms are more manageable in Indianapolis than in higher-cost markets. Six months of PITIA on a $245,000 Indianapolis property at current rates runs approximately $10,000 to $12,000 — a fraction of what a similar reserve requirement demands in Dallas or Chicago. This lower barrier to post-close reserves makes portfolio-building in Indianapolis accessible to investors who are still accumulating capital rather than those who have already scaled significantly. Indiana does not assess a state-level real estate transfer tax on investment property sales, which improves exit math for investors who hold and eventually sell.",
       ],
     },
   ],
