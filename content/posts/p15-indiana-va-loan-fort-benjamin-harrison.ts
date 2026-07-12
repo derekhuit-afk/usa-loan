@@ -53,6 +53,13 @@ export const post: Post = {
         "Indiana exempts all military retirement pay from state income tax. For veterans who retired after 20 or more years of service, this eliminates Indiana's 3.23 percent flat income tax on what is often a $30,000 to $60,000 annual retirement income stream. Combined with Indiana's low cost of living and affordable real estate, the after-tax financial profile for military retirees settling in Indianapolis is compelling relative to higher-cost retirement destinations.",
       ],
     },
+    {
+      heading: "VA entitlement strategy in Indiana's affordable market",
+      paragraphs: [
+        "Indiana's home prices mean VA entitlement has exceptional purchasing reach relative to most states. A veteran with full entitlement can purchase a $285,000 Indianapolis home with zero down payment and no private mortgage insurance. Total cash to close on a typical Indiana VA purchase runs $3,000 to $5,500 in transaction costs, and sellers frequently contribute closing costs as a negotiated concession. The practical result is that qualified Indiana veterans can purchase with minimal out-of-pocket cost while building equity from the first payment.",
+        "Indiana's market also supports simultaneous VA loan usage in specific circumstances. A veteran who owns a home financed with a VA loan and needs to relocate may be able to obtain a second VA loan on a new Indiana primary residence without first selling the existing property. This requires sufficient remaining entitlement and lender approval. The ability to retain the first home as a rental while purchasing a second with VA financing creates a path to building a residential real estate position using the VA benefit rather than higher-rate investment financing products. Indiana's low home prices make this dual-use strategy more financially accessible than in markets where the first VA purchase exhausts most available entitlement.",
+      ],
+    },
   ],
   comparison: {
     heading: "Indiana VA loan vs. conventional: the zero-down advantage at Indianapolis prices",
@@ -62,16 +69,9 @@ export const post: Post = {
     rows: [
       ["Purchase price example", "$245,000", "$245,000"],
       ["Down payment required", "$0", "$12,250"],
-      ["Monthly PMI", "None", "~$102/mo"],
+      ["Monthly PMI", "None", "Required until 20 percent equity"],
       ["Funding fee (first use)", "$5,267 (2.15 percent, financed)", "None"],
       ["Cash to close (approx.)", "$3,000–$5,000 in costs", "$15,000–$18,000 total"],
-    ],
-  },
-  {
-    heading: "VA entitlement strategy in Indiana's affordable market",
-    paragraphs: [
-      "Indiana's home prices mean VA entitlement has exceptional purchasing reach relative to most states. A veteran with full entitlement can purchase a $285,000 Indianapolis home with zero down payment and no private mortgage insurance. Total cash to close on a typical Indiana VA purchase runs $3,000 to $5,500 in transaction costs, and sellers frequently contribute closing costs as a negotiated concession. The practical result is that qualified Indiana veterans can purchase with minimal out-of-pocket cost while building equity from the first payment.",
-      "Indiana's market also supports simultaneous VA loan usage in specific circumstances. A veteran who owns a home financed with a VA loan and needs to relocate may be able to obtain a second VA loan on a new Indiana primary residence without first selling the existing property. This requires sufficient remaining entitlement and lender approval. The ability to retain the first home as a rental while purchasing a second with VA financing creates a path to building a residential real estate position using the VA benefit rather than higher-rate investment financing products. Indiana's low home prices make this dual-use strategy more financially accessible than in markets where the first VA purchase exhausts most available entitlement.",
     ],
   },
   faq: [

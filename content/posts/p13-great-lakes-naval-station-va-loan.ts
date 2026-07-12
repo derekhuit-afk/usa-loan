@@ -52,6 +52,14 @@ export const post: Post = {
         "Lake County VA appraisals function on the standard VA timeline but the market moves quickly enough that purchase agreements need VA escape clauses maintained while appraisals are ordered. The VA funding fee for first-time VA loan users is 2.15 percent of the loan amount — financed into the loan. Veterans rated 10 percent or more service-connected disabled pay no funding fee. Illinois also provides a property tax exemption for disabled veterans ranging from $2,500 to full exemption at 70 percent or higher service-connected disability rating.",
       ],
     },
+    {
+      heading: "Making your VA offer competitive in Lake County",
+      paragraphs: [
+        "VA offers in the Great Lakes corridor compete effectively when the buyer and lender manage the transaction professionally. Sellers in North Chicago, Waukegan, and Gurnee are familiar with VA buyers — the base generates consistent purchase volume and area real estate professionals understand VA timelines. Pre-approval letters should specify full VA entitlement available.",
+        "Earnest money deposits in Lake County typically run one to two percent of purchase price. VA buyers who put forward meaningful earnest money signal commitment and seriousness in the same way conventional buyers do. The VA escape clause is a required contract provision that protects the buyer if the property does not appraise — but it does not prevent a competitive offer structure. Buyers who arrive pre-approved, ready to close in 30 to 45 days, and willing to put forward a market-standard earnest money deposit win VA offers in Lake County regularly.",
+        "Home inspection prior to VA appraisal is strongly recommended in older Lake County housing stock. Identifying needed repairs before the VA appraiser arrives allows the seller and buyer to negotiate repairs or price adjustments before the appraisal documents conditions that can block closing. Properties with deferred roof maintenance, aging HVAC systems, or visible paint deterioration are the most common sources of VA minimum property requirement delays in this market. Working proactively on visible condition issues before listing or before the appraisal is ordered is the most effective way to keep VA closings on schedule in the Great Lakes corridor.",
+      ],
+    },
   ],
   comparison: {
     heading: "Great Lakes housing corridor: community comparison for VA buyers",
@@ -64,14 +72,6 @@ export const post: Post = {
       ["Gurnee / Round Lake Beach", "$250K–$380K", "Tax ~2.1 percent · Good schools · Suburban"],
       ["Libertyville / Vernon Hills", "$350K–$550K", "Tax ~1.9 percent · Premium suburban, lower tax"],
       ["Lake Forest / Lake Bluff", "$550K+", "Tax ~1.8 percent · Above standard VA utility"],
-    ],
-  },
-  {
-    heading: "Making your VA offer competitive in Lake County",
-    paragraphs: [
-      "VA offers in the Great Lakes corridor compete effectively when the buyer and lender manage the transaction professionally. Sellers in North Chicago, Waukegan, and Gurnee are familiar with VA buyers — the base generates consistent purchase volume and area real estate professionals understand VA timelines. Pre-approval letters should specify full VA entitlement available.",
-      "Earnest money deposits in Lake County typically run one to two percent of purchase price. VA buyers who put forward meaningful earnest money signal commitment and seriousness in the same way conventional buyers do. The VA escape clause is a required contract provision that protects the buyer if the property does not appraise — but it does not prevent a competitive offer structure. Buyers who arrive pre-approved, ready to close in 30 to 45 days, and willing to put forward a market-standard earnest money deposit win VA offers in Lake County regularly.",
-      "Home inspection prior to VA appraisal is strongly recommended in older Lake County housing stock. Identifying needed repairs before the VA appraiser arrives allows the seller and buyer to negotiate repairs or price adjustments before the appraisal documents conditions that can block closing. Properties with deferred roof maintenance, aging HVAC systems, or visible paint deterioration are the most common sources of VA minimum property requirement delays in this market. Working proactively on visible condition issues before listing or before the appraisal is ordered is the most effective way to keep VA closings on schedule in the Great Lakes corridor.",
     ],
   },
   faq: [
