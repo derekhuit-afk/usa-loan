@@ -20,6 +20,20 @@ const LO_STATES: { abbr: string; name: string }[] = [
 ];
 const LO_ABBRS = LO_STATES.map((s) => s.abbr);
 
+/* ------------------------ State markets ------------------------ */
+const STATE_MARKETS: { slug: string; abbr: string; name: string; niche: string }[] = [
+  { slug: 'alaska',     abbr: 'AK', name: 'Alaska',     niche: 'VA & military lending · JBER · Fort Wainwright · Eielson' },
+  { slug: 'florida',    abbr: 'FL', name: 'Florida',    niche: 'DSCR investor lending · Self-employed & portfolio buyers' },
+  { slug: 'georgia',    abbr: 'GA', name: 'Georgia',    niche: 'VA military lending · First-time buyer purchase' },
+  { slug: 'illinois',   abbr: 'IL', name: 'Illinois',   niche: 'IHDA first-time buyer · Great Lakes VA lending' },
+  { slug: 'indiana',    abbr: 'IN', name: 'Indiana',    niche: 'DSCR investor financing · Indianapolis VA lending' },
+  { slug: 'michigan',   abbr: 'MI', name: 'Michigan',   niche: 'MSHDA first-time buyer DPA · DSCR investor financing' },
+  { slug: 'montana',    abbr: 'MT', name: 'Montana',    niche: 'Malmstrom AFB VA lending · USDA rural financing' },
+  { slug: 'oklahoma',   abbr: 'OK', name: 'Oklahoma',   niche: 'Tinker AFB & Fort Sill VA · DSCR investor financing' },
+  { slug: 'texas',      abbr: 'TX', name: 'Texas',      niche: 'Fort Cavazos & JBSA VA · DFW DSCR investor financing' },
+  { slug: 'washington', abbr: 'WA', name: 'Washington', niche: 'WSHFC DPA stacking · Military buyers near JBLM' },
+];
+
 const ALL_STATES = [
   'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA',
   'HI','ID','IL','IN','IA','KS','KY','LA','ME','MD',
@@ -88,6 +102,7 @@ function TopBar() {
         </a>
         <nav className="hidden items-center gap-8 text-[11px] font-semibold uppercase tracking-trackout text-cream/70 md:flex">
           <a href="#programs" className="hover-underline hover:text-cream">Programs</a>
+          <a href="#states" className="hover-underline hover:text-cream">States</a>
           <a href="#licensing" className="hover-underline hover:text-cream">Licensing</a>
           <a href="#guide" className="hover-underline hover:text-cream">Free guide</a>
         </nav>
@@ -242,6 +257,60 @@ function Programs() {
   );
 }
 
+/* ------------------------ State markets board ------------------------ */
+function StateMarkets() {
+  return (
+    <section id="states" className="bg-white py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 md:px-10">
+        <Reveal>
+          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-trackout text-gold-600">
+            Where I lend
+          </p>
+          <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight text-navy md:text-5xl">
+            Ten states. A local playbook for each one.
+          </h2>
+          <p className="mt-5 max-w-2xl text-ink/70">
+            Every state below has its own guide — the down payment assistance that actually stacks, the
+            military bases I lend around, and the programs that fit that market. Pick yours.
+          </p>
+        </Reveal>
+
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-navy/10 bg-navy/10 sm:grid-cols-2">
+          {STATE_MARKETS.map((s, i) => (
+            <Reveal key={s.slug} delay={(i % 2) * 90}>
+              <Link
+                href={`/states/${s.slug}`}
+                className="group flex h-full items-center gap-5 bg-white p-6 transition-colors hover:bg-cream md:p-7"
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy font-mono text-sm font-semibold text-gold transition-colors group-hover:bg-gold group-hover:text-navy">
+                  {s.abbr}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-display text-xl font-medium text-navy">{s.name}</span>
+                  <span className="mt-1 block truncate text-[13px] leading-snug text-ink/60">{s.niche}</span>
+                </span>
+                <span
+                  aria-hidden
+                  className="font-mono text-gold-600 transition-transform group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+
+        <p className="mt-6 text-xs text-ink/50">
+          Derek Huit NMLS #203980 · Cardinal Financial Company, LP NMLS #66247 ·{' '}
+          <a href="#licensing" className="hover-underline text-ink/70">
+            Verify every license below
+          </a>
+        </p>
+      </div>
+    </section>
+  );
+}
+
 /* ------------------------ Licensing ledger (signature) ------------------------ */
 function Licensing() {
   return (
@@ -272,11 +341,16 @@ function Licensing() {
               </p>
               <ul className="mt-4 grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
                 {LO_STATES.map((s) => (
-                  <li key={s.abbr} className="flex items-center gap-2.5 text-sm text-ink">
-                    <span className="rounded bg-gold/20 px-1.5 py-0.5 font-mono text-[11px] font-semibold text-gold-600">
-                      {s.abbr}
-                    </span>
-                    {s.name}
+                  <li key={s.abbr}>
+                    <Link
+                      href={`/states/${s.name.toLowerCase()}`}
+                      className="group flex items-center gap-2.5 text-sm text-ink"
+                    >
+                      <span className="rounded bg-gold/20 px-1.5 py-0.5 font-mono text-[11px] font-semibold text-gold-600">
+                        {s.abbr}
+                      </span>
+                      <span className="hover-underline group-hover:text-navy">{s.name}</span>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -656,6 +730,7 @@ export default function Page() {
       <TopBar />
       <Hero />
       <Programs />
+      <StateMarkets />
       <Licensing />
       <Guide />
       <Process />
