@@ -103,6 +103,7 @@ export const post: Post = {
     { label: "Georgia state overview", href: "/states/georgia" },
     { label: "Fort Stewart and Hunter AAF VA guide", href: "/learn/fort-stewart-hunter-aaf-va-loan-guide-georgia-2026" },
     { label: "VA loan program details", href: "/programs/va" },
+    { label: "First-time buyer programs", href: "/programs/first-time-buyer" },
     { label: "Start your pre-qualification", href: "https://online.cardinalfinancial.com/#/p/apply/derekhuit" },
   ],
 };
