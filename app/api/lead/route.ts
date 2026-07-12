@@ -31,6 +31,8 @@ export async function POST(req: NextRequest) {
     const zip = (body.zip || '').toString().trim();
     const loan_type = (body.loan_type || 'exploring').toString().slice(0, 40);
     const source = (body.source || 'usa.loan').toString().slice(0, 120);
+    const state = (body.state || null)?.toString().slice(0, 40) || null;
+    const program = (body.program || null)?.toString().slice(0, 40) || null;
     const tcpa_consent = body.tcpa_consent === true;
     const terms_consent = body.terms_consent === true;
 
@@ -78,6 +80,8 @@ export async function POST(req: NextRequest) {
         source,
         ip_address: ip,
         user_agent: userAgent,
+        state,
+        program,
         tcpa_consent,
         terms_consent,
         consent_timestamp: new Date().toISOString(),
