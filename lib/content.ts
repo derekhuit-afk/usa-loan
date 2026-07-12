@@ -17,6 +17,7 @@ export type Post = {
   publishDate: string;           // YYYY-MM-DD — gate logic uses this
   states: string[];              // e.g. ["florida"] — linter requires ≥1
   cluster: string;               // content cluster label
+  dscr?: boolean;                // true = DSCR disclosure required on this post
   readMinutes: number;
   keywords: {
     primary: string;
