@@ -61,6 +61,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
+  verification: { google: "-RqTiM9DiuuUk60yjFrKoiIdQFMu1XMPqta9Ip64sH0" },
   metadataBase: new URL('https://usa.loan'),
   title: 'USA.loan — Get Pre-Approved in Minutes | Derek Huit, NMLS #203980',
   description:
