@@ -8,6 +8,7 @@ const APPLY_URL = 'https://online.cardinalfinancial.com/#/p/apply/derekhuit';
 /* ------------------------ Licensing data ------------------------ */
 const LO_STATES: { abbr: string; name: string }[] = [
   { abbr: 'AK', name: 'Alaska' },
+  { abbr: 'FL', name: 'Florida' },
   { abbr: 'GA', name: 'Georgia' },
   { abbr: 'IL', name: 'Illinois' },
   { abbr: 'IN', name: 'Indiana' },
@@ -112,7 +113,7 @@ function Hero() {
         {/* Left: headline */}
         <div className="md:col-span-7">
           <p className="rise rise-1 mb-6 font-mono text-[11px] font-medium uppercase tracking-trackout text-gold">
-            Direct mortgage lending · Personally licensed in 9 states
+            Direct mortgage lending · Personally licensed in 10 states
           </p>
 
           <h1 className="rise rise-2 font-display text-[52px] leading-[1.02] tracking-tight text-cream md:text-[80px]">
@@ -156,7 +157,7 @@ function Hero() {
               </div>
               <div>
                 <dt className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Licensed states</dt>
-                <dd className="mt-1 font-display text-2xl text-cream">9</dd>
+                <dd className="mt-1 font-display text-2xl text-cream">10</dd>
               </div>
               <div>
                 <dt className="font-mono text-[10px] uppercase tracking-trackout text-cream/50">Pre-approval</dt>
@@ -267,7 +268,7 @@ function Licensing() {
               <p className="mt-2 font-display text-2xl font-medium text-navy">Derek Huit</p>
               <p className="mt-1 font-mono text-sm text-gold-600">NMLS #203980</p>
               <p className="mt-5 text-sm leading-relaxed text-ink/70">
-                Personally licensed to originate mortgage loans in <strong className="text-navy">9 states</strong>:
+                Personally licensed to originate mortgage loans in <strong className="text-navy">10 states</strong>:
               </p>
               <ul className="mt-4 grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
                 {LO_STATES.map((s) => (
@@ -607,7 +608,7 @@ function Footer() {
             </p>
             <p className="mt-5 font-mono text-xs text-cream/70">Derek Huit · NMLS #203980</p>
             <p className="mt-1 font-mono text-xs text-cream/50">
-              Licensed in: AK · GA · IL · IN · MI · MT · OK · TX · WA
+              Licensed in: AK · FL · GA · IL · IN · MI · MT · OK · TX · WA
             </p>
           </div>
           <div className="text-sm text-cream/60">
@@ -632,7 +633,7 @@ function Footer() {
 
         <div className="mt-12 border-t border-cream/10 pt-8 text-xs leading-relaxed text-cream/40">
           <p>
-            ⌂ Equal Housing Opportunity. Derek Huit, NMLS #203980, is licensed in Alaska, Georgia, Illinois, Indiana,
+            ⌂ Equal Housing Opportunity. Derek Huit, NMLS #203980, is licensed in Alaska, Florida, Georgia, Illinois, Indiana,
             Michigan, Montana, Oklahoma, Texas, and Washington. Cardinal Financial Company, Limited Partnership, NMLS
             #66247, holds state licenses as described at cardinalfinancial.com/nmls-licensing. This site is not
             authorized by the New York State Department of Financial Services. No mortgage loan applications for
