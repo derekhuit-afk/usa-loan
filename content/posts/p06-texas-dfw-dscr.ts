@@ -69,7 +69,7 @@ export const post: Post = {
     heading: "DFW submarket comparison: where deals work in 2026",
     intro:
       "These figures reflect approximate 2026 market conditions. Actual rents, taxes, and ratios vary by specific property and must be verified at the address level before contracting.",
-    columns: ["Submarket", "Price / Rent range", "Typical ratio"],
+    columns: ["Price / Rent range", "Typical ratio"],
     rows: [
       ["Mesquite / Garland (east Dallas)", "$220K–$380K · Rent $1,700–$2,400", "1.10–1.40"],
       ["Grand Prairie / Irving (mid-cities)", "$260K–$400K · Rent $1,800–$2,500", "1.05–1.25"],
