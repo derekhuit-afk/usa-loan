@@ -43,7 +43,7 @@ export const post: Post = {
       heading: "BAH math at Malmstrom: what the rate covers",
       paragraphs: [
         "Malmstrom AFB uses the Great Falls, Montana BAH rate. In 2026, the E-5 with-dependent rate is monthly BAH of $1,422. At this rate and current 30-year VA mortgage rates, a VA buyer can finance a home priced $175,000 to $225,000 with total PITIA at or near BAH coverage. Montana's effective property tax rate of 0.74 percent keeps the tax component of housing obligation lower than most comparable markets.",
-        "Officers and senior NCOs at higher BAH rates cover purchases up to $280,000 to $350,000 without meaningful out-of-pocket monthly housing expense above their allowance. O-5 and O-6 BAH at the Great Falls rate runs $1,872 to $1,980 monthly BAH, covering a well-equipped home in most Great Falls neighborhoods. The Malmstrom BAH rate is lower than Tinker, Great Lakes, or JBSA — but so are Great Falls home prices. The ratio works.",
+        "Officers and senior NCOs at higher BAH rates cover purchases up to $280,000 to $350,000 without meaningful out-of-pocket monthly housing expense above their allowance. O-5 and O-6 BAH at the Great Falls rate runs $1,872 to that figure BAH, covering a well-equipped home in most Great Falls neighborhoods. The Malmstrom BAH rate is lower than Tinker, Great Lakes, or JBSA — but so are Great Falls home prices. The ratio works.",
       ],
     },
     {
