@@ -126,9 +126,9 @@ export const post: Post = {
   ],
   related: [
     { label: "Florida state overview", href: "/states/florida" },
-    { label: "Jacksonville DSCR investor guide", href: "/learn/jacksonville-dscr-loan-investor-guide-2026" },
     { label: "VA loan program details", href: "/programs/va" },
-    { label: "DSCR investor loans", href: "/programs/dscr" },
+    { label: "First-time buyer programs", href: "/programs/first-time-buyer" },
+    { label: "Learn guides", href: "/learn" },
     { label: "Start your pre-qualification", href: "https://online.cardinalfinancial.com/#/p/apply/derekhuit" },
   ],
 };
