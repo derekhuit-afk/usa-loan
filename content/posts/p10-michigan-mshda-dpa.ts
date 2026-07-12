@@ -101,8 +101,9 @@ export const post: Post = {
   ],
   related: [
     { label: "Michigan state overview", href: "/states/michigan" },
-    { label: "Detroit and Grand Rapids DSCR investor guide", href: "/learn/michigan-dscr-loan-investor-guide-detroit-grand-rapids-2026" },
+    { label: "Detroit and Grand Rapids investor guide", href: "/learn/michigan-dscr-loan-investor-guide-detroit-grand-rapids-2026" },
     { label: "VA loan program details", href: "/programs/va" },
+    { label: "First-time buyer programs", href: "/programs/first-time-buyer" },
     { label: "Start your pre-qualification", href: "https://online.cardinalfinancial.com/#/p/apply/derekhuit" },
   ],
 };
