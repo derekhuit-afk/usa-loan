@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { track } from '@vercel/analytics';
 
 const APPLY_URL = 'https://online.cardinalfinancial.com/#/p/apply/derekhuit';
 
@@ -488,6 +489,7 @@ function Guide() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Something went wrong.');
+      track('lead_submitted', { source: 'usa.loan/lead-magnet', loan_type: form.loan_type || 'exploring' });
       setStatus('success');
     } catch (err: unknown) {
       setStatus('error');

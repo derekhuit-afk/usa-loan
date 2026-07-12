@@ -2,10 +2,12 @@ import Link from "next/link";
 import { getPublishedPosts } from "@/content/posts";
 import type { Metadata } from "next";
 
+export const revalidate = 3600; // pick up newly published posts hourly
+
 export const metadata: Metadata = {
   title: "Mortgage Guides | Derek Huit · NMLS #203980",
   description:
-    "In-depth home loan guides for buyers and investors in Florida, Washington, Alaska, and across Derek Huit's licensed states.",
+    "In-depth home loan guides for buyers, veterans, and investors across all 10 of Derek Huit's licensed states — AK, FL, GA, IL, IN, MI, MT, OK, TX, WA.",
 };
 
 export default function LearnIndex() {
@@ -22,8 +24,8 @@ export default function LearnIndex() {
             The mortgage library.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/75">
-            In-depth guides for home buyers, veterans, and real estate investors. Florida DSCR.
-            Washington WSHFC stacking. Alaska VA. Written by a loan officer who has actually closed these loans.
+            In-depth guides for home buyers, veterans, and real estate investors across 10 states —
+            written by a loan officer who has actually closed these loans.
           </p>
         </div>
       </section>
@@ -31,7 +33,31 @@ export default function LearnIndex() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           {posts.length === 0 ? (
-            <p className="text-ink/50">Guides coming soon.</p>
+            <div className="rounded-2xl border border-navy/10 bg-cream p-8 md:p-12">
+              <p className="font-mono text-[11px] font-medium uppercase tracking-widest text-gold-600">
+                First guides publish the week of July 21
+              </p>
+              <h2 className="mt-3 max-w-xl font-display text-2xl font-medium leading-snug text-navy md:text-3xl">
+                New guides land here weekly through October — DSCR, VA, and first-time buyer playbooks for all 10 states.
+              </h2>
+              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ink/70">
+                While you wait, grab the free pre-approval guide or jump straight to your state&rsquo;s lending page.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/#guide"
+                  className="rounded-full bg-navy px-6 py-3 text-center font-mono text-xs font-semibold uppercase tracking-widest text-cream transition-colors hover:bg-navy/90"
+                >
+                  Get the free guide
+                </Link>
+                <Link
+                  href="/#states"
+                  className="rounded-full border border-navy/20 px-6 py-3 text-center font-mono text-xs font-semibold uppercase tracking-widest text-navy transition-colors hover:bg-white"
+                >
+                  Browse the 10 states
+                </Link>
+              </div>
+            </div>
           ) : (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {posts.map((post) => (

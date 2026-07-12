@@ -3,6 +3,8 @@ import Link from "next/link";
 import { getPost, getPublishedPosts, POSTS } from "@/content/posts";
 import type { Metadata } from "next";
 
+export const revalidate = 3600; // re-evaluate publish gate hourly
+
 const APPLY_URL = "https://online.cardinalfinancial.com/#/p/apply/derekhuit";
 const DSCR_DISCLOSURE =
   "DSCR loans are for investment properties only and are not available for primary residences or second homes. All loans subject to credit approval, underwriting, and appraisal.";
@@ -21,6 +23,15 @@ export async function generateMetadata({
   return {
     title: `${post.title} | Derek Huit · NMLS #203980`,
     description: post.description,
+    alternates: { canonical: `https://usa.loan/learn/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `https://usa.loan/learn/${post.slug}`,
+      type: "article",
+      publishedTime: post.publishDate,
+      images: ["/og.png"],
+    },
   };
 }
 
@@ -32,10 +43,50 @@ export default function LearnPost({ params }: { params: { slug: string } }) {
   const today = new Date().toISOString().slice(0, 10);
   if (post.publishDate > today) notFound();
 
-  const isDscr = post.states.includes("florida") && post.cluster?.toLowerCase().includes("dscr");
+  const isDscr = post.dscr === true;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: post.title,
+        description: post.description,
+        datePublished: post.publishDate,
+        mainEntityOfPage: `https://usa.loan/learn/${post.slug}`,
+        author: {
+          "@type": "Person",
+          name: "Derek Huit",
+          identifier: "NMLS #203980",
+          url: "https://usa.loan",
+        },
+        publisher: { "@type": "Organization", name: "USA.loan", url: "https://usa.loan" },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: post.faq.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://usa.loan" },
+          { "@type": "ListItem", position: 2, name: "Guides", item: "https://usa.loan/learn" },
+          { "@type": "ListItem", position: 3, name: post.title, item: `https://usa.loan/learn/${post.slug}` },
+        ],
+      },
+    ],
+  };
 
   return (
     <main className="bg-white text-ink">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ── Header ── */}
       <section className="border-b border-navy/10 bg-cream py-14 md:py-20">
         <div className="mx-auto max-w-4xl px-6 md:px-10">

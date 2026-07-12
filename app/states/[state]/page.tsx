@@ -10,6 +10,8 @@ const APPLY_URL = "https://online.cardinalfinancial.com/#/p/apply/derekhuit";
 const DSCR_DISCLOSURE =
   "DSCR loans are for investment properties only and are not available for primary residences or second homes. All loans subject to credit approval, underwriting, and appraisal.";
 
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   return STATES.map((s) => ({ state: s.slug }));
 }
@@ -37,8 +39,33 @@ export default function StatePage({ params }: { params: { state: string } }) {
 
   const posts = getPostsByState(s.slug);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        mainEntity: s.faq.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://usa.loan" },
+          { "@type": "ListItem", position: 2, name: `${s.name} Home Loans`, item: `https://usa.loan/states/${s.slug}` },
+        ],
+      },
+    ],
+  };
+
   return (
     <main className="bg-white text-ink">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ── Hero ── */}
       <section className="bg-navy py-20 text-cream md:py-28">
         <div className="mx-auto max-w-6xl px-6 md:px-10">

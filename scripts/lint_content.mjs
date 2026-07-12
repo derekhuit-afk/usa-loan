@@ -40,14 +40,27 @@ for (const file of postFiles) {
 
   if (wc < 1200 || wc > 2600) fail(tag, `Word count ${wc} outside 1,200–2,600 window`);
 
-  for (const re of [/\$[\d,]+\s+per\s+month/gi, /\$[\d,.]+\s+monthly/gi, /\$[\d,.]+\s*\/\s*month/gi]) {
+  for (const re of [/\$[\d,]+\s+per\s+month/gi, /\$[\d,.]+\s+monthly/gi, /\$[\d,.]+\s*\/\s*mo(nth)?\b/gi, /\$[\d,.]+\s+a\s+month/gi]) {
     const m = p.match(re);
     if (m) fail(tag, "Reg Z trigger: payment amount advertised", m[0]);
   }
 
   if (/AHFC/i.test(src)) fail(tag, "Forbidden: AHFC reference");
   if (/AnnieMac/i.test(src)) fail(tag, "Forbidden: AnnieMac reference");
+  // Any decimal % with the symbol is forbidden; spelled-out "X.X percent" is
+  // forbidden only in a finance-charge context (interest / APR / mortgage-rate).
   if (/\b\d+\.\d+\s*%/.test(p)) fail(tag, "Forbidden: rate/APR percentage in prose");
+  // Proximity match: a decimal figure stated AS an interest rate/APR.
+  // (Funding fees, property tax, income tax percentages are not trigger terms.)
+  // Limitation: regex guardrail only — bare "rates near X.X percent" without an
+  // interest/APR/mortgage qualifier is not caught; human review still applies.
+  const rateNear = /(interest|APR|note\s+rate|mortgage\s+rate)[^.]{0,30}\b\d+\.\d+\s*percent\b|\b\d+\.\d+\s*percent\b[^.]{0,8}(interest|APR)/i;
+  const proseStrings = (src.match(/"([^"\\]{20,})"/g) || []).map(m => m.slice(1,-1));
+  for (const str of proseStrings) {
+    if (rateNear.test(str)) {
+      fail(tag, "Forbidden: decimal interest/APR percentage in prose", str);
+    }
+  }
   if (!src.includes("203980")) fail(tag, "Missing NMLS #203980");
   if (!src.includes("66247")) fail(tag, "Missing NMLS #66247");
 
