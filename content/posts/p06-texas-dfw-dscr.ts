@@ -66,16 +66,16 @@ export const post: Post = {
     },
   ],
   comparison: {
-    heading: "DFW submarket DSCR comparison: where deals work in 2026",
+    heading: "DFW submarket comparison: where deals work in 2026",
     intro:
       "These figures reflect approximate 2026 market conditions. Actual rents, taxes, and ratios vary by specific property and must be verified at the address level before contracting.",
-    columns: ["Submarket", "Price range"],
+    columns: ["Submarket", "Price / Rent range", "Typical ratio"],
     rows: [
-      ["Mesquite / Garland (east Dallas)", "$220K–$380K · Rent $1,700–$2,400 · DSCR 1.10–1.40"],
-      ["Grand Prairie / Irving (mid-cities)", "$260K–$400K · Rent $1,800–$2,500 · DSCR 1.05–1.25"],
-      ["Fort Worth (workforce housing)", "$200K–$320K · Rent $1,500–$2,100 · DSCR 1.10–1.30"],
-      ["Frisco / Plano / Carrollton (north suburbs)", "$400K–$600K · Rent $2,200–$3,200 · DSCR 0.90–1.10"],
-      ["Uptown / Central Dallas", "$500K–$900K · Rent $2,800–$4,000 · DSCR 0.75–0.95"],
+      ["Mesquite / Garland (east Dallas)", "$220K–$380K · Rent $1,700–$2,400", "1.10–1.40"],
+      ["Grand Prairie / Irving (mid-cities)", "$260K–$400K · Rent $1,800–$2,500", "1.05–1.25"],
+      ["Fort Worth (workforce housing)", "$200K–$320K · Rent $1,500–$2,100", "1.10–1.30"],
+      ["Frisco / Plano / Carrollton (north suburbs)", "$400K–$600K · Rent $2,200–$3,200", "0.90–1.10"],
+      ["Uptown / Central Dallas", "$500K–$900K · Rent $2,800–$4,000", "0.75–0.95"],
     ],
   },
   faq: [
