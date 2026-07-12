@@ -72,7 +72,7 @@ export const post: Post = {
   faq: [
     {
       q: "How does Oklahoma's tornado risk affect DSCR qualification?",
-      a: "Oklahoma's tornado exposure drives homeowner's insurance premiums meaningfully above the national average. A standard Oklahoma City SFR carries annual insurance of $1,800 to $2,800 depending on age, construction type, and whether the home has a storm shelter. That translates to $150 to $233 per month on the expense side of the DSCR calculation. Investors modeling OKC deals with $100 per month insurance estimates will calculate ratios that are materially too optimistic. Get an actual insurance quote for the specific property before finalizing the DSCR ratio.",
+      a: "Oklahoma's tornado exposure drives homeowner's insurance premiums meaningfully above the national average. A standard Oklahoma City SFR carries annual insurance of $1,800 to $2,800 depending on age, construction type, and whether the home has a storm shelter. That translates to $150 to $233 monthly on the expense side of the DSCR calculation. Investors modeling OKC deals with $100 monthly insurance estimates will calculate ratios that are materially too optimistic. Get an actual insurance quote for the specific property before finalizing the DSCR ratio.",
     },
     {
       q: "Can I buy multiple Oklahoma City properties with DSCR loans?",
