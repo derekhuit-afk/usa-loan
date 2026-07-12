@@ -105,6 +105,7 @@ export const post: Post = {
     { label: "Michigan state overview", href: "/states/michigan" },
     { label: "MSHDA first-time buyer guide", href: "/learn/michigan-mshda-down-payment-assistance-guide-2026" },
     { label: "DSCR loan program details", href: "/programs/dscr" },
+    { label: "Texas investor guide", href: "/states/texas" },
     { label: "Start your pre-qualification", href: "https://online.cardinalfinancial.com/#/p/apply/derekhuit" },
   ],
 };
