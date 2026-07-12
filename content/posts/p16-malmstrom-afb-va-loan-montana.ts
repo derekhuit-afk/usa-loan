@@ -42,15 +42,15 @@ export const post: Post = {
     {
       heading: "BAH math at Malmstrom: what the rate covers",
       paragraphs: [
-        "Malmstrom AFB uses the Great Falls, Montana BAH rate. In 2026, the E-5 with-dependent rate is $1,422 per month. At this rate and current 30-year VA mortgage rates, a VA buyer can finance a home priced $175,000 to $225,000 with total PITIA at or near BAH coverage. Montana's effective property tax rate of 0.74 percent keeps the tax component of housing obligation lower than most comparable markets.",
-        "Officers and senior NCOs at higher BAH rates cover purchases up to $280,000 to $350,000 without meaningful out-of-pocket monthly housing expense above their allowance. O-5 and O-6 BAH at the Great Falls rate runs $1,872 to $1,980 per month, covering a well-equipped home in most Great Falls neighborhoods. The Malmstrom BAH rate is lower than Tinker, Great Lakes, or JBSA — but so are Great Falls home prices. The ratio works.",
+        "Malmstrom AFB uses the Great Falls, Montana BAH rate. In 2026, the E-5 with-dependent rate is monthly BAH of $1,422. At this rate and current 30-year VA mortgage rates, a VA buyer can finance a home priced $175,000 to $225,000 with total PITIA at or near BAH coverage. Montana's effective property tax rate of 0.74 percent keeps the tax component of housing obligation lower than most comparable markets.",
+        "Officers and senior NCOs at higher BAH rates cover purchases up to $280,000 to $350,000 without meaningful out-of-pocket monthly housing expense above their allowance. O-5 and O-6 BAH at the Great Falls rate runs $1,872 to $1,980 monthly BAH, covering a well-equipped home in most Great Falls neighborhoods. The Malmstrom BAH rate is lower than Tinker, Great Lakes, or JBSA — but so are Great Falls home prices. The ratio works.",
       ],
     },
     {
       heading: "Montana-specific VA loan considerations",
       paragraphs: [
         "Montana VA appraisals take longer than most states because the VA appraiser pool is thin across a large geographic area. Plan for 15 to 25 business days for appraisal delivery in Great Falls rather than the 7 to 12 days common in urban markets. Purchase agreements should include adequate appraisal contingency periods. Well and septic properties — common outside Great Falls city limits — require specific VA inspection conditions that can extend the process further.",
-        "Montana has no state income tax, which benefits military buyers who receive taxable housing and subsistence allowances beyond BAH. Active-duty airmen and their families relocating from higher-tax states should model the after-tax income comparison as part of the PCS financial planning process. Montana also exempts military retirement pay from state income tax.",
+        "Montana has no state income tax, which benefits military buyers who receive taxable housing and subsistence allowances beyond BAH. Active-duty airmen and their families relocating from higher-tax states should model the after-tax income comparison as part of the PCS financial planning process. Montana also exempts military retirement pay from state income tax. For a retired Air Force officer, that exemption on a retirement check of $48,000 annually eliminates a tax obligation that would exist in most other states — keeping more income available for housing, savings, and the Montana lifestyle that drew them to stay.",
         "The Montana Disabled Veterans Assistance Program provides a refundable property tax credit for disabled veterans. Veterans rated 100 percent permanently and totally disabled may qualify for a full property tax exemption on a primary residence. Applications are filed with the Montana Department of Revenue and require VA rating documentation.",
       ],
     },
@@ -63,8 +63,8 @@ export const post: Post = {
     rows: [
       ["E-5 BAH w/dep (2026)", "$1,422/mo", "OKC/Tinker: $1,512 · Chicago/Great Lakes: $2,727"],
       ["Median home price", "~$278K", "OKC: ~$212K · Lake County IL: ~$340K"],
-      ["Effective property tax", "~0.74%", "Indiana: ~0.85% · IL Cook County: ~2.5–3.5%"],
-      ["State income tax", "None", "Indiana: 3.23% · Illinois: 4.95%"],
+      ["Effective property tax", "~0.74 percent", "Indiana: ~0.85 percent · IL Cook County: ~2.5–3.5 percent"],
+      ["State income tax", "None", "Indiana: 3.23 percent · Illinois: 4.95 percent"],
       ["VA appraisal timeline", "15–25 business days", "Urban markets: 7–12 business days"],
     ],
   },
