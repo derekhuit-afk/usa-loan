@@ -1,7 +1,9 @@
 import type { Post } from "../../lib/content";
 import { post as p01 } from "./p01-jacksonville-dscr-investor-guide";
+import { post as p02 } from "./p02-wshfc-dpa-stacking-guide";
+import { post as p03 } from "./p03-jblm-va-loan-guide-washington";
 
-export const POSTS: Post[] = [p01].sort(
+export const POSTS: Post[] = [p01, p02, p03].sort(
   (a, b) => (a.publishDate < b.publishDate ? -1 : 1)
 );
 
