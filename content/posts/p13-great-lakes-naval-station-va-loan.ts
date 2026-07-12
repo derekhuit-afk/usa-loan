@@ -1,0 +1,94 @@
+import type { Post } from "../../lib/content";
+
+export const post: Post = {
+  slug: "great-lakes-naval-station-va-loan-guide-illinois-2026",
+  title: "Naval Station Great Lakes VA Loan Guide 2026: Buying a Home in Lake County Illinois",
+  description:
+    "Naval Station Great Lakes is the Navy's only boot camp. Permanent-party sailors, first-assignment personnel, and veterans separating near Chicago need VA lenders who understand Lake County's market. This guide covers BAH math, neighborhood options, and what makes Great Lakes VA purchases different.",
+  publishDate: "2026-09-08",
+  states: ["illinois"],
+  cluster: "VA military",
+  readMinutes: 10,
+  keywords: {
+    primary: "Naval Station Great Lakes VA loan 2026",
+    secondary: [
+      "Great Lakes Illinois VA home loan",
+      "Lake County IL VA loan",
+      "Navy VA loan Illinois 2026",
+      "North Chicago Waukegan VA home purchase",
+      "VA loan BAH Great Lakes sailors",
+    ],
+    longtail: [
+      "buying a house near Naval Station Great Lakes Illinois",
+      "VA loan eligibility first assignment sailors Great Lakes",
+      "Great Lakes Navy BAH versus mortgage payment 2026",
+      "Lake County IL VA appraisal timeline 2026",
+      "Waukegan North Chicago Gurnee VA home purchase options",
+    ],
+  },
+  hook: [
+    "Naval Station Great Lakes is unique in the Navy's shore installation inventory: it is the only place in the country where enlisted sailors complete recruit training. That creates a constant cycle of new personnel arriving for A-school and follow-on training, many of whom are making their first serious financial decisions — including whether to rent or buy near the installation for a two or three year assignment.",
+    "The answer for most permanent-party sailors and families is buy. Lake County's housing inventory in the Great Lakes corridor carries median prices that VA entitlement handles comfortably. No down payment. No PMI. BAH covers the full housing obligation on the right property. This guide covers the market, the math, and what to know before you start.",
+  ],
+  sections: [
+    {
+      heading: "The Great Lakes housing corridor: communities and pricing",
+      paragraphs: [
+        "Naval Station Great Lakes sits between North Chicago and Lake Bluff on Lake County's eastern edge. The housing market that serves the base spans several distinct communities: North Chicago immediately adjacent to the base with the most affordable prices ($150,000 to $220,000 range but with concentrated vacancy and property condition challenges); Waukegan to the north, a larger city with a wider range of price points and inventory ($180,000 to $290,000); Gurnee to the west with suburban inventory, good schools, and prices of $250,000 to $380,000; Libertyville and Vernon Hills further west in the premium suburban range ($350,000 to $550,000); and the North Shore communities of Lake Forest and Lake Bluff at price points well above VA loan utility for most military buyers.",
+        "For E-5 and below personnel, Waukegan and North Chicago's more affordable inventory represents the realistic purchase window. For E-6 and above and for junior officers, Gurnee and the Libertyville corridor offer suburban quality at prices the Chicago metro BAH rate covers. Officers from O-3 up can often purchase in higher-quality North Shore adjacent communities with manageable out-of-pocket monthly housing expense above BAH.",
+      ],
+    },
+    {
+      heading: "BAH math at the Chicago metro rate",
+      paragraphs: [
+        "Naval Station Great Lakes falls under the Chicago-Naperville-Elgin metropolitan statistical area BAH rate. In 2026, the E-5 with-dependent BAH rate is $2,727 per month — the highest BAH rate in Illinois by a significant margin, reflecting Chicago's housing cost environment. This rate applies regardless of whether personnel live in North Chicago, Waukegan, or Gurnee.",
+        "At $2,727 per month, a VA loan buyer can typically finance a home priced between $330,000 and $400,000 with total monthly housing obligation at or below BAH — depending on current interest rates, property taxes (Lake County effective rates run 2.0 to 2.8 percent), and homeowner's insurance. At $2,727 BAH and a property tax rate of 2.3 percent, a $340,000 home financed at a current 30-year VA rate produces total PITIA very close to BAH coverage. The math is tighter than Lawton or Great Falls but workable in the right price range.",
+      ],
+    },
+    {
+      heading: "VA loan considerations specific to Lake County, Illinois",
+      paragraphs: [
+        "Lake County's property tax structure is the most important variable for Great Lakes VA buyers. Effective rates in Lake County range from 1.9 to 2.8 percent of assessed value depending on municipality and school district. At 2.3 percent on a $340,000 home, property taxes run approximately $655 per month — a significant portion of the total housing obligation. Buyers who focus on purchase price without modeling the tax impact accurately risk buying a home where the total PITIA exceeds BAH by a meaningful margin.",
+        "Lake County VA appraisals function on the standard VA timeline but the market moves quickly enough that purchase agreements need VA escape clauses maintained while appraisals are ordered. The VA funding fee for first-time VA loan users is 2.15 percent of the loan amount — financed into the loan. Veterans rated 10 percent or more service-connected disabled pay no funding fee. Illinois also provides a property tax exemption for disabled veterans ranging from $2,500 to full exemption at 70 percent or higher service-connected disability rating.",
+      ],
+    },
+  ],
+  comparison: {
+    heading: "Great Lakes housing corridor: community comparison for VA buyers",
+    intro:
+      "Lake County pricing reflects proximity to Chicago. The further west from the base, the better the suburban infrastructure — at higher acquisition cost.",
+    columns: ["Typical price range", "Property tax / Notes"],
+    rows: [
+      ["North Chicago (adjacent to base)", "$150K–$220K", "Tax ~2.5% · Walkable to gate · Limited inventory"],
+      ["Waukegan", "$180K–$290K", "Tax ~2.3% · Largest city, most inventory"],
+      ["Gurnee / Round Lake Beach", "$250K–$380K", "Tax ~2.1% · Good schools · Suburban"],
+      ["Libertyville / Vernon Hills", "$350K–$550K", "Tax ~1.9% · Premium suburban, lower tax"],
+      ["Lake Forest / Lake Bluff", "$550K+", "Tax ~1.8% · Above standard VA utility"],
+    ],
+  },
+  faq: [
+    {
+      q: "Can first-assignment sailors at Great Lakes A-school use VA loans?",
+      a: "VA loan eligibility requires 90 days of active-duty service during wartime or 181 days during peacetime for active-duty personnel. First-assignment sailors who completed recruit training and are attending A-school typically do not yet have 90 days of active-duty service. Once service requirements are met, VA eligibility kicks in. Some lenders will begin the pre-approval process before the service threshold is crossed and finalize once the requirement is satisfied.",
+    },
+    {
+      q: "What is the VA loan limit in Lake County, Illinois?",
+      a: "Lake County, Illinois falls within the standard conforming loan limit for VA purposes. In 2026, the baseline VA guarantee limit is $806,500. For borrowers with full VA entitlement — meaning they have not used VA financing before, or a prior VA loan was paid off and entitlement was restored — there is no loan limit, and no down payment is required regardless of purchase price. Lenders may apply their own overlay limits above the guarantee baseline.",
+    },
+    {
+      q: "Does Illinois have a property tax exemption for veterans near Great Lakes?",
+      a: "Yes. Illinois provides the Disabled Veterans Standard Homestead Exemption, which reduces assessed value by $2,500 for veterans with 30 to 49 percent disability rating, $5,000 for 50 to 69 percent, and full exemption for veterans rated 70 percent or higher. The exemption applies to a primary residence owned by the qualifying veteran. Applications are filed with the Lake County assessor.",
+    },
+    {
+      q: "Is Derek Huit licensed in Illinois?",
+      a: "Yes. Derek Huit, NMLS #203980, holds an Illinois Residential Mortgage License. Cardinal Financial Company, Limited Partnership, NMLS #66247, is the lender. Both can be verified at NMLS Consumer Access.",
+    },
+  ],
+  related: [
+    { label: "Illinois state overview", href: "/states/illinois" },
+    { label: "VA loan program details", href: "/programs/va" },
+    { label: "First-time buyer program details", href: "/programs/first-time-buyer" },
+    { label: "Georgia VA loan guide Fort Stewart", href: "/learn/fort-stewart-hunter-aaf-va-loan-guide-georgia-2026" },
+    { label: "Start your pre-qualification", href: "https://online.cardinalfinancial.com/#/p/apply/derekhuit" },
+  ],
+};
