@@ -104,6 +104,7 @@ export const post: Post = {
     { label: "Texas state overview", href: "/states/texas" },
     { label: "DSCR loan program details", href: "/programs/dscr" },
     { label: "VA loans in Texas", href: "/learn/texas-va-loan-guide-fort-cavazos-jbsa-2026" },
+    { label: "Georgia DSCR and investor resources", href: "/states/georgia" },
     { label: "Start your pre-qualification", href: "https://online.cardinalfinancial.com/#/p/apply/derekhuit" },
   ],
 };
