@@ -8,6 +8,7 @@ export const post: Post = {
   publishDate: "2026-09-22",
   states: ["indiana"],
   cluster: "VA military",
+  dscr: true,
   readMinutes: 10,
   keywords: {
     primary: "Indiana VA loan 2026",
@@ -41,8 +42,8 @@ export const post: Post = {
     {
       heading: "Indianapolis VA purchase math: what BAH covers",
       paragraphs: [
-        "The Indianapolis-Carmel-Anderson MSA BAH rate for 2026 is $1,692 per month for an E-5 with dependents. At this rate and current 30-year VA mortgage rates, VA buyers can typically finance homes priced $210,000 to $265,000 with total PITIA at or below BAH — factoring Indiana's 0.85 percent effective property tax and standard homeowner's insurance. Active-duty personnel stationed at Camp Atterbury or Stout Field who commute to Indianapolis also receive Indianapolis-rate BAH.",
-        "For Reserve and Guard members not on active-duty orders, BAH does not apply — they are purchasing from personal income. But the same calculation matters for affordability: Indiana's low acquisition prices mean a $245,000 Indianapolis home at current VA rates produces a total payment in the $1,600 to $1,750 per month range including taxes and insurance — the kind of payment that works on a single income in most Midwest occupations.",
+        "The Indianapolis-Carmel-Anderson MSA BAH rate for 2026 is $1,692 monthly for an E-5 with dependents. At this rate and current 30-year VA mortgage rates, VA buyers can typically finance homes priced $210,000 to $265,000 with total PITIA at or below BAH — factoring Indiana's 0.85 percent effective property tax and standard homeowner's insurance. Active-duty personnel stationed at Camp Atterbury or Stout Field who commute to Indianapolis also receive Indianapolis-rate BAH.",
+        "For Reserve and Guard members not on active-duty orders, BAH does not apply — they are purchasing from personal income. But the same calculation matters for affordability: Indiana's low acquisition prices mean a $245,000 Indianapolis home at current VA rates produces a total payment in the $1,600 to $1,750 monthly range including taxes and insurance — the kind of payment that works on a single income in most Midwest occupations.",
       ],
     },
     {
@@ -62,8 +63,15 @@ export const post: Post = {
       ["Purchase price example", "$245,000", "$245,000"],
       ["Down payment required", "$0", "$12,250"],
       ["Monthly PMI", "None", "~$102/mo"],
-      ["Funding fee (first use)", "$5,267 (2.15%, financed)", "None"],
+      ["Funding fee (first use)", "$5,267 (2.15 percent, financed)", "None"],
       ["Cash to close (approx.)", "$3,000–$5,000 in costs", "$15,000–$18,000 total"],
+    ],
+  },
+  {
+    heading: "VA entitlement strategy in Indiana's affordable market",
+    paragraphs: [
+      "Indiana's home prices mean VA entitlement has exceptional purchasing reach relative to most states. A veteran with full entitlement can purchase a $285,000 Indianapolis home with zero down payment and no private mortgage insurance. Total cash to close on a typical Indiana VA purchase runs $3,000 to $5,500 in transaction costs, and sellers frequently contribute closing costs as a negotiated concession. The practical result is that qualified Indiana veterans can purchase with minimal out-of-pocket cost while building equity from the first payment.",
+      "Indiana's market also supports simultaneous VA loan usage in specific circumstances. A veteran who owns a home financed with a VA loan and needs to relocate may be able to obtain a second VA loan on a new Indiana primary residence without first selling the existing property. This requires sufficient remaining entitlement and lender approval. The ability to retain the first home as a rental while purchasing a second with VA financing creates a path to building a residential real estate position using the VA benefit rather than higher-rate investment financing products. Indiana's low home prices make this dual-use strategy more financially accessible than in markets where the first VA purchase exhausts most available entitlement.",
     ],
   },
   faq: [
