@@ -83,14 +83,14 @@ export const post: Post = {
     heading: "Washington DPA programs: amounts, requirements, and compatibility",
     intro:
       "Programs can be stacked where income limits overlap. Verify current funding availability directly with each program before relying on assistance in a purchase transaction.",
-    columns: ["Program details", "Key requirements"],
+    columns: ["Key requirements", "Stackable with"],
     rows: [
-      ["WSHFC Home Advantage DPA — up to 4% of loan amount, 0% deferred", "Income up to $180K (King/Snohomish); WSHFC first mortgage required; education course required"],
-      ["WSHFC Needs-Based DPA — up to $10,000 at 1% deferred", "Income below program threshold; veterans exempt from needs assessment; WSHFC first mortgage required"],
-      ["WSHFC Veterans DPA — up to $10,000 at 3% deferred", "Honorably discharged vet, active military, Guard, Reserve, or surviving spouse; WSHFC first mortgage required"],
-      ["Seattle Office of Housing — up to $90,000 (3BR+) / $70,000 (smaller)", "Seattle city limits; income at 80–100% AMI; first-time buyer; funding first-come first-served"],
-      ["Tacoma DPA — up to $20,000", "Tacoma city limits; income limits apply; verify current availability"],
-      ["WSHFC HomeChoice — up to $15,000 at 1% deferred", "Buyer or household member with disability; WSHFC first mortgage required"],
+      ["WSHFC Home Advantage DPA — up to 4% deferred at 0%", "Income up to $180K; WSHFC first mortgage; education course required", "VA, FHA, USDA, conventional"],
+      ["WSHFC Needs-Based DPA — up to $10,000 at 1% deferred", "Income below program threshold; veterans exempt from needs assessment", "Home Advantage first mortgage"],
+      ["WSHFC Veterans DPA — up to $10,000 at 3% deferred", "Honorably discharged vet, active military, Guard, Reserve, surviving spouse", "Home Advantage or House Key"],
+      ["Seattle Office of Housing — up to $90,000 (3BR+)", "Seattle city limits; 80–100% AMI; first-time buyer; first-come first-served", "WSHFC Home Advantage"],
+      ["Tacoma DPA — up to $20,000", "Tacoma city limits; income limits apply; verify current availability", "WSHFC programs"],
+      ["WSHFC HomeChoice — up to $15,000 at 1% deferred", "Buyer or household member with disability", "WSHFC first mortgage"],
     ],
   },
   faq: [
