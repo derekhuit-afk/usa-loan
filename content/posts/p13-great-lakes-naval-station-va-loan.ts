@@ -41,14 +41,14 @@ export const post: Post = {
     {
       heading: "BAH math at the Chicago metro rate",
       paragraphs: [
-        "Naval Station Great Lakes falls under the Chicago-Naperville-Elgin metropolitan statistical area BAH rate. In 2026, the E-5 with-dependent BAH rate is $2,727 per month — the highest BAH rate in Illinois by a significant margin, reflecting Chicago's housing cost environment. This rate applies regardless of whether personnel live in North Chicago, Waukegan, or Gurnee.",
-        "At $2,727 per month, a VA loan buyer can typically finance a home priced between $330,000 and $400,000 with total monthly housing obligation at or below BAH — depending on current interest rates, property taxes (Lake County effective rates run 2.0 to 2.8 percent), and homeowner's insurance. At $2,727 BAH and a property tax rate of 2.3 percent, a $340,000 home financed at a current 30-year VA rate produces total PITIA very close to BAH coverage. The math is tighter than Lawton or Great Falls but workable in the right price range.",
+        "Naval Station Great Lakes falls under the Chicago-Naperville-Elgin metropolitan statistical area BAH rate. In 2026, the E-5 with-dependent BAH rate is $2,727 monthly — the highest BAH rate in Illinois by a significant margin, reflecting Chicago's housing cost environment. This rate applies regardless of whether personnel live in North Chicago, Waukegan, or Gurnee.",
+        "At $2,727 monthly, a VA loan buyer can typically finance a home priced between $330,000 and $400,000 with total monthly housing obligation at or below BAH — depending on current interest rates, property taxes (Lake County effective rates run 2.0 to 2.8 percent), and homeowner's insurance. At $2,727 BAH and a property tax rate of 2.3 percent, a $340,000 home financed at a current 30-year VA rate produces total PITIA very close to BAH coverage. The math is tighter than Lawton or Great Falls but workable in the right price range.",
       ],
     },
     {
       heading: "VA loan considerations specific to Lake County, Illinois",
       paragraphs: [
-        "Lake County's property tax structure is the most important variable for Great Lakes VA buyers. Effective rates in Lake County range from 1.9 to 2.8 percent of assessed value depending on municipality and school district. At 2.3 percent on a $340,000 home, property taxes run approximately $655 per month — a significant portion of the total housing obligation. Buyers who focus on purchase price without modeling the tax impact accurately risk buying a home where the total PITIA exceeds BAH by a meaningful margin.",
+        "Lake County's property tax structure is the most important variable for Great Lakes VA buyers. Effective rates in Lake County range from 1.9 to 2.8 percent of assessed value depending on municipality and school district. At 2.3 percent on a $340,000 home, property taxes run approximately $655 monthly — a significant portion of the total housing obligation. Buyers who focus on purchase price without modeling the tax impact accurately risk buying a home where the total PITIA exceeds BAH by a meaningful margin.",
         "Lake County VA appraisals function on the standard VA timeline but the market moves quickly enough that purchase agreements need VA escape clauses maintained while appraisals are ordered. The VA funding fee for first-time VA loan users is 2.15 percent of the loan amount — financed into the loan. Veterans rated 10 percent or more service-connected disabled pay no funding fee. Illinois also provides a property tax exemption for disabled veterans ranging from $2,500 to full exemption at 70 percent or higher service-connected disability rating.",
       ],
     },
@@ -59,11 +59,19 @@ export const post: Post = {
       "Lake County pricing reflects proximity to Chicago. The further west from the base, the better the suburban infrastructure — at higher acquisition cost.",
     columns: ["Typical price range", "Property tax / Notes"],
     rows: [
-      ["North Chicago (adjacent to base)", "$150K–$220K", "Tax ~2.5% · Walkable to gate · Limited inventory"],
-      ["Waukegan", "$180K–$290K", "Tax ~2.3% · Largest city, most inventory"],
-      ["Gurnee / Round Lake Beach", "$250K–$380K", "Tax ~2.1% · Good schools · Suburban"],
-      ["Libertyville / Vernon Hills", "$350K–$550K", "Tax ~1.9% · Premium suburban, lower tax"],
-      ["Lake Forest / Lake Bluff", "$550K+", "Tax ~1.8% · Above standard VA utility"],
+      ["North Chicago (adjacent to base)", "$150K–$220K", "Tax ~2.5 percent · Walkable to gate · Limited inventory"],
+      ["Waukegan", "$180K–$290K", "Tax ~2.3 percent · Largest city, most inventory"],
+      ["Gurnee / Round Lake Beach", "$250K–$380K", "Tax ~2.1 percent · Good schools · Suburban"],
+      ["Libertyville / Vernon Hills", "$350K–$550K", "Tax ~1.9 percent · Premium suburban, lower tax"],
+      ["Lake Forest / Lake Bluff", "$550K+", "Tax ~1.8 percent · Above standard VA utility"],
+    ],
+  },
+  {
+    heading: "Making your VA offer competitive in Lake County",
+    paragraphs: [
+      "VA offers in the Great Lakes corridor compete effectively when the buyer and lender manage the transaction professionally. Sellers in North Chicago, Waukegan, and Gurnee are familiar with VA buyers — the base generates consistent purchase volume and area real estate professionals understand VA timelines. Pre-approval letters should specify full VA entitlement available.",
+      "Earnest money deposits in Lake County typically run one to two percent of purchase price. VA buyers who put forward meaningful earnest money signal commitment and seriousness in the same way conventional buyers do. The VA escape clause is a required contract provision that protects the buyer if the property does not appraise — but it does not prevent a competitive offer structure. Buyers who arrive pre-approved, ready to close in 30 to 45 days, and willing to put forward a market-standard earnest money deposit win VA offers in Lake County regularly.",
+      "Home inspection prior to VA appraisal is strongly recommended in older Lake County housing stock. Identifying needed repairs before the VA appraiser arrives allows the seller and buyer to negotiate repairs or price adjustments before the appraisal documents conditions that can block closing. Properties with deferred roof maintenance, aging HVAC systems, or visible paint deterioration are the most common sources of VA minimum property requirement delays in this market. Working proactively on visible condition issues before listing or before the appraisal is ordered is the most effective way to keep VA closings on schedule in the Great Lakes corridor.",
     ],
   },
   faq: [
