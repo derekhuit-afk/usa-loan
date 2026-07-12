@@ -102,7 +102,7 @@ export const post: Post = {
   related: [
     { label: "Texas state overview", href: "/states/texas" },
     { label: "VA loan program details", href: "/programs/va" },
-    { label: "Dallas-Fort Worth investor guide", href: "/learn/dallas-fort-worth-dscr-loan-investor-guide-2026" },
+    { label: "Texas mortgage programs", href: "/programs/first-time-buyer" },
     { label: "Georgia VA loan guide", href: "/learn/fort-stewart-hunter-aaf-va-loan-guide-georgia-2026" },
     { label: "Start your pre-qualification", href: "https://online.cardinalfinancial.com/#/p/apply/derekhuit" },
   ],
