@@ -1,9 +1,7 @@
 import type { Post } from "../../lib/content";
+import { post as p01 } from "./p01-jacksonville-dscr-investor-guide";
 
-// Posts registered here in publish-date order.
-// Add new imports below as posts are created.
-
-export const POSTS: Post[] = ([] as Post[]).sort(
+export const POSTS: Post[] = [p01].sort(
   (a, b) => (a.publishDate < b.publishDate ? -1 : 1)
 );
 
