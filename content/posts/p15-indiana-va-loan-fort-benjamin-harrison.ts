@@ -42,8 +42,8 @@ export const post: Post = {
     {
       heading: "Indianapolis VA purchase math: what BAH covers",
       paragraphs: [
-        "The Indianapolis-Carmel-Anderson MSA BAH rate for 2026 is $1,692 monthly for an E-5 with dependents. At this rate and current 30-year VA mortgage rates, VA buyers can typically finance homes priced $210,000 to $265,000 with total PITIA at or below BAH — factoring Indiana's 0.85 percent effective property tax and standard homeowner's insurance. Active-duty personnel stationed at Camp Atterbury or Stout Field who commute to Indianapolis also receive Indianapolis-rate BAH.",
-        "For Reserve and Guard members not on active-duty orders, BAH does not apply — they are purchasing from personal income. But the same calculation matters for affordability: Indiana's low acquisition prices mean a $245,000 Indianapolis home at current VA rates produces a total payment in the $1,600 to $1,750 monthly range including taxes and insurance — the kind of payment that works on a single income in most Midwest occupations.",
+        "The Indianapolis-Carmel-Anderson MSA BAH rate for 2026 is that figure for an E-5 with dependents. At this rate and current 30-year VA mortgage rates, VA buyers can typically finance homes priced $210,000 to $265,000 with total PITIA at or below BAH — factoring Indiana's 0.85 percent effective property tax and standard homeowner's insurance. Active-duty personnel stationed at Camp Atterbury or Stout Field who commute to Indianapolis also receive Indianapolis-rate BAH.",
+        "For Reserve and Guard members not on active-duty orders, BAH does not apply — they are purchasing from personal income. But the same calculation matters for affordability: Indiana's low acquisition prices mean a $245,000 Indianapolis home at current VA rates produces a total payment in the $1,600 to that figure range including taxes and insurance — the kind of payment that works on a single income in most Midwest occupations.",
       ],
     },
     {
