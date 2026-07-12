@@ -8,6 +8,7 @@ export const post: Post = {
   publishDate: "2026-10-13",
   states: ["oklahoma"],
   cluster: "VA military",
+  dscr: true,
   readMinutes: 11,
   keywords: {
     primary: "Oklahoma VA loan 2026",
@@ -27,7 +28,7 @@ export const post: Post = {
     ],
   },
   hook: [
-    "Oklahoma has three active-duty installations and one of the lowest median home prices of any state with significant military population. That combination — VA entitlement plus Oklahoma affordability — produces some of the strongest VA purchasing power in the country. An E-5 with dependents at Tinker AFB receives $1,512 per month in BAH. Oklahoma City area median home prices run near $212,000. The math works on a level that is genuinely rare.",
+    "Oklahoma has three active-duty installations and one of the lowest median home prices of any state with significant military population. That combination — VA entitlement plus Oklahoma affordability — produces some of the strongest VA purchasing power in the country. An E-5 with dependents at Tinker AFB receives $1,512 monthly in BAH. Oklahoma City area median home prices run near $212,000. The math works on a level that is genuinely rare.",
     "This guide covers all three installations — Tinker AFB in Midwest City, Fort Sill near Lawton, and Altus AFB in Jackson County — with BAH rates, neighborhood options, and Oklahoma's veteran property tax and military retirement benefits.",
   ],
   sections: [
@@ -35,14 +36,14 @@ export const post: Post = {
       heading: "Tinker AFB: Oklahoma City's largest employer and VA's busiest Oklahoma market",
       paragraphs: [
         "Tinker Air Force Base in Midwest City is home to the Oklahoma City Air Logistics Complex — one of the Air Force's three remaining ALCs and one of the largest aircraft maintenance and repair operations in the Department of Defense. Tinker employs approximately 26,000 military and civilian personnel and is Oklahoma County's largest single employer. The installation generates the majority of Oklahoma's VA loan volume simply by scale.",
-        "The communities most used by Tinker personnel for housing are Midwest City immediately adjacent to the base, Del City to the west, Choctaw to the east, and Harrah further east in eastern Oklahoma County. Median home prices in these communities run $180,000 to $265,000. At an E-5 BAH rate of $1,512 per month and Oklahoma's effective property tax rate near 0.90 percent, VA buyers can finance homes priced $190,000 to $240,000 with total PITIA at or near BAH coverage. Officers and senior NCOs reach $280,000 to $360,000 with similar coverage ratios.",
-        "Oklahoma City's southwest and northwest suburbs — Moore, Norman, Edmond, and Yukon — attract Tinker personnel seeking newer construction and higher-rated school districts at prices of $230,000 to $350,000. These communities are 20 to 35 minutes from the main gate. The BAH difference between coverage and payment at these price points is typically $200 to $400 per month out of pocket above allowance — a manageable gap in Oklahoma's low-cost-of-living environment.",
+        "The communities most used by Tinker personnel for housing are Midwest City immediately adjacent to the base, Del City to the west, Choctaw to the east, and Harrah further east in eastern Oklahoma County. Median home prices in these communities run $180,000 to $265,000. At an E-5 BAH rate of $1,512 monthly and Oklahoma's effective property tax rate near 0.90 percent, VA buyers can finance homes priced $190,000 to $240,000 with total PITIA at or near BAH coverage. Officers and senior NCOs reach $280,000 to $360,000 with similar coverage ratios.",
+        "Oklahoma City's southwest and northwest suburbs — Moore, Norman, Edmond, and Yukon — attract Tinker personnel seeking newer construction and higher-rated school districts at prices of $230,000 to $350,000. These communities are 20 to 35 minutes from the main gate. The BAH difference between coverage and payment at these price points is typically $200 to $400 monthly out of pocket above allowance — a manageable gap in Oklahoma's low-cost-of-living environment.",
       ],
     },
     {
       heading: "Fort Sill: VA purchasing power in Lawton",
       paragraphs: [
-        "Fort Sill near Lawton is the Army's Field Artillery School and Air Defense Artillery Center. The Lawton-Fort Sill MSA BAH rate for E-5 with dependents in 2026 is $1,134 per month — among the lower rates in the Army's installation inventory, reflecting Lawton's extremely low housing costs. Lawton median home prices run $140,000 to $190,000. At $1,134 BAH, VA buyers can finance a $175,000 to $210,000 Lawton home with total PITIA at or near BAH coverage.",
+        "Fort Sill near Lawton is the Army's Field Artillery School and Air Defense Artillery Center. The Lawton-Fort Sill MSA BAH rate for E-5 with dependents in 2026 is $1,134 monthly — among the lower rates in the Army's installation inventory, reflecting Lawton's extremely low housing costs. Lawton median home prices run $140,000 to $190,000. At $1,134 BAH, VA buyers can finance a $175,000 to $210,000 Lawton home with total PITIA at or near BAH coverage.",
         "Lawton is a small city of approximately 90,000 with a housing stock heavily weighted toward 1960s to 1980s construction. New construction exists but is limited in scale. VA appraisals in Lawton are generally straightforward — the market is familiar to VA appraisers and prices are well below conforming limits. Comanche County's property tax effective rate runs near 0.80 percent, lower than the Oklahoma state average and significantly lower than metro counties.",
         "Soldiers separating from Fort Sill who choose to remain in the Lawton area benefit from one of the most affordable VA purchase environments in the Army. A veteran who used VA financing during active service and had the loan paid off at separation can restore full entitlement and reuse it for a Lawton or broader Oklahoma purchase.",
       ],
@@ -50,7 +51,7 @@ export const post: Post = {
     {
       heading: "Altus AFB and Oklahoma's veteran benefits",
       paragraphs: [
-        "Altus Air Force Base in Jackson County is home to the 97th Air Mobility Wing and conducts heavy airlift training. The surrounding Altus community carries median home prices of $110,000 to $160,000 — some of the lowest of any active-duty installation in the Air Force. VA entitlement goes exceptionally far in Jackson County. A modest $130,000 Altus home financed with VA produces total PITIA under $1,000 per month including property taxes and insurance.",
+        "Altus Air Force Base in Jackson County is home to the 97th Air Mobility Wing and conducts heavy airlift training. The surrounding Altus community carries median home prices of $110,000 to $160,000 — some of the lowest of any active-duty installation in the Air Force. VA entitlement goes exceptionally far in Jackson County. A modest $130,000 Altus home financed with VA produces total PITIA under $1,000 monthly including property taxes and insurance.",
         "Oklahoma exempts all military retirement pay from state income tax. For Air Force retirees who choose to stay in the Altus area after service, this exemption on a $30,000 to $50,000 annual retirement income stream represents $1,400 to $2,500 in annual tax savings versus states with income tax on military retirement. Oklahoma also provides a full property tax exemption for veterans rated 100 percent permanently and totally disabled on their primary residence.",
       ],
     },
