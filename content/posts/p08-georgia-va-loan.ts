@@ -67,13 +67,13 @@ export const post: Post = {
   comparison: {
     heading: "Neighborhood comparison: Fort Stewart and Hunter AAF communities",
     intro: "Distances are approximate gate-to-neighborhood estimates. Property tax rates reflect county-level effective rates for 2025-2026.",
-    columns: ["Community", "Details"],
+    columns: ["Distance / Median price", "Tax rate / Notes"],
     rows: [
-      ["Hinesville (Liberty Co.)", "5–10 min to Stewart · Median $209K–$270K · Tax rate ~0.83 percent · Most affordable"],
-      ["Richmond Hill (Bryan Co.)", "25 min to Stewart, 25 min to Hunter · Median $396K–$436K · Top-rated schools"],
-      ["Savannah / Pooler (Chatham Co.)", "Under 15 min to Hunter · Median ~$340K (Savannah) · Tax ~1.15 percent"],
-      ["Rincon / Guyton (Effingham Co.)", "35–45 min to Hunter · More land, lower taxes · Family-focused"],
-      ["Garden City / Port Wentworth", "Under 10 min to Hunter · More affordable price points"],
+      ["Hinesville (Liberty Co.)", "5–10 min to Stewart · Median $209K–$270K", "Tax ~0.83 percent · Most affordable"],
+      ["Richmond Hill (Bryan Co.)", "25 min to both installations · Median $396K–$436K", "Top-rated schools · Best midpoint"],
+      ["Savannah / Pooler (Chatham Co.)", "Under 15 min to Hunter · Median ~$340K", "Tax ~1.15 percent · Urban access"],
+      ["Rincon / Guyton (Effingham Co.)", "35–45 min to Hunter · More land", "Lower taxes · Family-focused"],
+      ["Garden City / Port Wentworth", "Under 10 min to Hunter", "More affordable price points"],
     ],
   },
   faq: [
