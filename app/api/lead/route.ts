@@ -118,6 +118,70 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // Forward to Relcu (Cardinal CRM) — non-blocking, Supabase record is source of truth.
+    // Activates when env vars are set: RELCU_INTAKE_EMAIL (email delivery via Resend)
+    // and/or RELCU_POST_URL [+ RELCU_API_KEY] (direct JSON POST). Silent no-op otherwise.
+    let relcuOk = false;
+    const relcuPayload = {
+      firstName: name.split(' ')[0],
+      lastName: name.split(' ').slice(1).join(' ') || name,
+      name,
+      email,
+      phone,
+      zip,
+      loanType: loan_type,
+      state,
+      program,
+      source,
+      leadSource: 'usa.loan',
+      tcpaConsent: tcpa_consent,
+      consentTimestamp: new Date().toISOString(),
+      ipAddress: ip,
+    };
+    if (process.env.RELCU_POST_URL) {
+      try {
+        const res = await fetch(process.env.RELCU_POST_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            ...(process.env.RELCU_API_KEY ? { Authorization: `Bearer ${process.env.RELCU_API_KEY}` } : {}),
+          },
+          body: JSON.stringify(relcuPayload),
+        });
+        relcuOk = res.ok;
+        if (!res.ok) console.error('[lead] Relcu POST failed:', res.status, await res.text().catch(() => ''));
+      } catch (err) {
+        console.error('[lead] Relcu POST error:', err);
+      }
+    }
+    if (process.env.RELCU_INTAKE_EMAIL && process.env.RESEND_API_KEY) {
+      try {
+        const { Resend } = await import('resend');
+        const resend = new Resend(process.env.RESEND_API_KEY);
+        await resend.emails.send({
+          from: process.env.LEAD_FROM_EMAIL || 'leads@usa.loan',
+          to: process.env.RELCU_INTAKE_EMAIL,
+          subject: `New Lead: ${name} · ${loan_type}${state ? ' · ' + state.toUpperCase() : ''} · usa.loan`,
+          text: [
+            `Name: ${name}`,
+            `Email: ${email}`,
+            `Phone: ${phone}`,
+            `ZIP: ${zip}`,
+            `Loan Type: ${loan_type}`,
+            state ? `State: ${state}` : null,
+            program ? `Program: ${program}` : null,
+            `Source: ${source}`,
+            `TCPA Consent: yes (${relcuPayload.consentTimestamp})`,
+            `Lead Source: usa.loan`,
+          ].filter(Boolean).join('\n'),
+        });
+        relcuOk = true;
+      } catch (err) {
+        console.error('[lead] Relcu email error:', err);
+      }
+    }
+    void relcuOk;
+
     // If persistence failed, surface it — a silently dropped lead is worse than a retry prompt
     if (!supabaseOk) {
       return NextResponse.json(
