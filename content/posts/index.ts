@@ -21,11 +21,19 @@ import { post as p19 } from "./p19-oklahoma-city-dscr-investor-guide";
 import { post as p20 } from "./p20-oklahoma-section-184-guide";
 import { post as p21 } from "./p21-section-184-vs-fha-vs-va";
 import { post as p22 } from "./p22-section-184-trust-land-fee-simple";
+import { post as p23 } from "./p23-florida-section-184-guide";
+import { post as p24 } from "./p24-texas-section-184-guide";
+import { post as p25 } from "./p25-michigan-section-184-guide";
+import { post as p26 } from "./p26-washington-section-184-guide";
+import { post as p27 } from "./p27-indiana-section-184-guide";
+import { post as p28 } from "./p28-montana-section-184-guide";
+import { post as p29 } from "./p29-illinois-section-184-guide";
 
 export const POSTS: Post[] = [
   p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11,
   p12, p13, p14, p15, p16, p17, p18, p19,
   p20, p21, p22,
+  p23, p24, p25, p26, p27, p28, p29,
 ].sort((a, b) => (a.publishDate < b.publishDate ? -1 : 1));
 
 export function getPost(slug: string): Post | undefined {

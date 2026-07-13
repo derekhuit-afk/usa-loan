@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getProgram, PROGRAMS } from "@/content/programs";
 import type { Metadata } from "next";
+import LeadForm from "@/components/LeadForm";
 
 const APPLY_URL = "https://online.cardinalfinancial.com/#/p/apply/derekhuit";
 const DSCR_DISCLOSURE =
@@ -192,6 +193,8 @@ export default function ProgramPage({ params }: { params: { program: string } })
           </div>
         </div>
       </section>
+
+      <LeadForm program={p.slug} source={`usa.loan/programs/${p.slug}`} />
 
       {/* ── Footer compliance ── */}
       <div className="border-t border-navy/10 bg-white px-6 py-8 md:px-10">

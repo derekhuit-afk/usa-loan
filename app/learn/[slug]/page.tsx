@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPost, getPublishedPosts, POSTS } from "@/content/posts";
 import type { Metadata } from "next";
+import LeadForm from "@/components/LeadForm";
 
 export const revalidate = 3600; // re-evaluate publish gate hourly
 
@@ -220,6 +221,12 @@ export default function LearnPost({ params }: { params: { slug: string } }) {
           </p>
         </div>
       </section>
+
+      <LeadForm
+        state={post.states[0]}
+        program={post.cluster}
+        source={`usa.loan/learn/${post.slug}`}
+      />
 
       <div className="border-t border-navy/10 bg-white px-6 py-8 md:px-10">
         <p className="mx-auto max-w-6xl text-xs leading-relaxed text-ink/40">

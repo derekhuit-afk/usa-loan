@@ -4,6 +4,7 @@ import { getState, STATES } from "@/content/states";
 import { getProgram } from "@/content/programs";
 import { getPostsByState } from "@/content/posts";
 import type { Metadata } from "next";
+import LeadForm from "@/components/LeadForm";
 
 const APPLY_URL = "https://online.cardinalfinancial.com/#/p/apply/derekhuit";
 
@@ -225,28 +226,12 @@ export default function StatePage({ params }: { params: { state: string } }) {
       </section>
 
       {/* ── Lead form ── */}
-      <section id="guide" className="bg-navy py-16 text-cream md:py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center md:px-10">
-          <p className="mb-3 font-mono text-[11px] font-medium uppercase tracking-widest text-gold">
-            {s.name} · Pre-qualification
-          </p>
-          <h2 className="font-display text-4xl font-medium leading-tight md:text-5xl">
-            Ready to get started?
-          </h2>
-          <p className="mx-auto mt-5 max-w-xl text-cream/70">
-            Ten-minute application. Real pre-approval. If I can&rsquo;t get you qualified, I&rsquo;ll tell you
-            exactly what to work on.
-          </p>
-          <div className="mt-8">
-            <a href={APPLY_URL} className="btn-gold">
-              Start my application
-            </a>
-          </div>
-          <p className="mt-6 font-mono text-xs text-cream/40">
-            Derek Huit · NMLS #203980 · Cardinal Financial · NMLS #66247 · Licensed in {s.name}
-          </p>
-        </div>
-      </section>
+      <LeadForm
+        state={s.slug}
+        stateName={s.name}
+        source={`usa.loan/states/${s.slug}`}
+        heading={`Ready to get started in ${s.name}?`}
+      />
 
       {/* ── Footer compliance ── */}
       <div className="border-t border-navy/10 bg-white px-6 py-8 md:px-10">
