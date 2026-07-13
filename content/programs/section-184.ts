@@ -3,7 +3,7 @@ import type { Program } from "../../lib/content";
 export const program: Program = {
   slug: "section-184",
   name: "Section 184 Native American Home Loans",
-  states: ["oklahoma", "alaska", "florida", "indiana", "michigan", "montana", "washington", "illinois", "texas"],
+  states: ["oklahoma", "florida", "indiana", "michigan", "montana", "washington", "illinois", "texas"],
   headline: "Section 184 Home Loans — HUD's Mortgage Program for Tribal Members",
   subheadline:
     "A 2.25 percent down payment, no monthly mortgage insurance, and underwriting built for Native homeownership — on tribal trust land, allotted land, or standard fee simple property. Here is how the program actually works.",
@@ -35,8 +35,8 @@ export const program: Program = {
     {
       heading: "Where the program works — and where Derek can originate it",
       paragraphs: [
-        "Section 184 eligibility is geographic as well as membership-based: participating tribes determine eligible areas, and the program now covers entire states in much of the country. Every county is eligible in Oklahoma, Alaska, Florida, Indiana, Michigan, Montana, and Washington. Select counties are eligible in Illinois and Texas. Georgia is not a participating state.",
-        "Oklahoma is the program's largest market — the state is home to more than three dozen federally recognized tribal nations, and all 77 Oklahoma counties are eligible lending areas. Derek Huit, NMLS #203980, is personally licensed in nine states where Section 184 operates: Oklahoma, Alaska, Florida, Illinois, Indiana, Michigan, Montana, Texas, and Washington. Cardinal Financial Company, Limited Partnership, NMLS #66247, is a HUD-approved Section 184 lender in each of them.",
+        "Section 184 eligibility is geographic as well as membership-based: participating tribes determine eligible areas, and the program now covers entire states in much of the country. Every county is eligible in Oklahoma, Florida, Indiana, Michigan, Montana, and Washington. Select counties are eligible in Illinois and Texas. Georgia is not a participating state.",
+        "Oklahoma is the program's largest market — the state is home to more than three dozen federally recognized tribal nations, and all 77 Oklahoma counties are eligible lending areas. Derek Huit, NMLS #203980, is personally licensed in eight states where Section 184 operates and is actively offered: Oklahoma, Florida, Illinois, Indiana, Michigan, Montana, Texas, and Washington. Cardinal Financial Company, Limited Partnership, NMLS #66247, is a HUD-approved Section 184 lender in each of them.",
         "The property type determines the closing mechanics. On fee simple land, a Section 184 closing looks like any other mortgage closing. On individual allotted trust land or tribal trust land, the Bureau of Indian Affairs participates in the transaction, and tribal trust purchases use a 50-year leasehold structure — the home and leasehold interest are mortgaged while the land itself remains in trust for the tribe. An experienced 184 lender manages that coordination; most lenders have never closed one.",
       ],
     },
