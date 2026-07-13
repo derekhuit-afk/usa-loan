@@ -18,10 +18,14 @@ import { post as p16 } from "./p16-malmstrom-afb-va-loan-montana";
 import { post as p17 } from "./p17-montana-usda-rural-home-loan";
 import { post as p18 } from "./p18-tinker-afb-fort-sill-va-loan-oklahoma";
 import { post as p19 } from "./p19-oklahoma-city-dscr-investor-guide";
+import { post as p20 } from "./p20-oklahoma-section-184-guide";
+import { post as p21 } from "./p21-section-184-vs-fha-vs-va";
+import { post as p22 } from "./p22-section-184-trust-land-fee-simple";
 
 export const POSTS: Post[] = [
   p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11,
   p12, p13, p14, p15, p16, p17, p18, p19,
+  p20, p21, p22,
 ].sort((a, b) => (a.publishDate < b.publishDate ? -1 : 1));
 
 export function getPost(slug: string): Post | undefined {
