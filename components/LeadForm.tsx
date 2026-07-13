@@ -80,6 +80,7 @@ export default function LeadForm({
     { v: 'refinancing', l: "I'm refinancing" },
     { v: 'va', l: "I'm using VA benefits" },
     ...(program === 'section-184' ? [{ v: 'section184', l: 'Section 184 / tribal member' }] : []),
+    ...(program === 'dscr' ? [{ v: 'dscr', l: 'Investment property / DSCR' }] : []),
     { v: 'exploring', l: 'Just exploring / not sure yet' },
   ];
 

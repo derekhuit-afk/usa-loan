@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getPublishedPosts } from "@/content/posts";
 import type { Metadata } from "next";
+import LeadForm from "@/components/LeadForm";
 
 export const revalidate = 3600; // pick up newly published posts hourly
 
@@ -94,6 +95,11 @@ export default function LearnIndex() {
           )}
         </div>
       </section>
+
+      <LeadForm
+        source="usa.loan/learn"
+        heading="Questions about any of these programs?"
+      />
 
       <div className="border-t border-navy/10 bg-white px-6 py-8 md:px-10">
         <p className="mx-auto max-w-6xl text-xs leading-relaxed text-ink/40">
