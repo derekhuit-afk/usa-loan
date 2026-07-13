@@ -180,8 +180,6 @@ export async function POST(req: NextRequest) {
         console.error('[lead] Relcu email error:', err);
       }
     }
-    void relcuOk;
-
     // If persistence failed, surface it — a silently dropped lead is worse than a retry prompt
     if (!supabaseOk) {
       return NextResponse.json(
@@ -193,7 +191,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       ok: true,
       guide_url: '/guide.pdf',
-      delivered: { supabase: supabaseOk, sms: smsOk },
+      delivered: { supabase: supabaseOk, sms: smsOk, relcu: relcuOk },
     });
   } catch (err) {
     console.error('[lead] unexpected:', err);
