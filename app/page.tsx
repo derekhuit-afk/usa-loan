@@ -441,7 +441,7 @@ function Licensing() {
 
         <Reveal delay={140}>
           <p className="mt-6 max-w-3xl text-xs leading-relaxed text-ink/50">
-            I personally originate loans in the nine states listed above. This site is not authorized by the New York
+            I personally originate loans in the 10 states listed above. This site is not authorized by the New York
             State Department of Financial Services, and no mortgage loan applications for properties located in New
             York will be accepted through this site.
           </p>
