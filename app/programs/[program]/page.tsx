@@ -201,7 +201,7 @@ export default function ProgramPage({ params }: { params: { program: string } })
         <p className="mx-auto max-w-6xl text-xs leading-relaxed text-ink/40">
           Derek Huit, NMLS #203980, is licensed to originate mortgage loans in Alaska, Georgia, Illinois, Indiana,
           Michigan, Montana, Oklahoma, Texas, Florida, and Washington. Cardinal Financial Company, Limited Partnership,
-          NMLS #66247. Equal Housing Opportunity. This is not a commitment to lend. All loans subject to credit
+          NMLS #66247. Equal Housing Opportunity. USA.loan is a private website operated by a licensed mortgage loan originator and is not a government agency. It is not affiliated with, endorsed by, or sponsored by the U.S. government, the Department of Veterans Affairs, HUD, FHA, USDA, or any other federal or state agency. This is not a commitment to lend. All loans subject to credit
           approval, underwriting, and appraisal.
           {p.dscr && " " + DSCR_DISCLOSURE}
         </p>
