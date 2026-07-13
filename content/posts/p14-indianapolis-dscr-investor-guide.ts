@@ -5,11 +5,11 @@ export const post: Post = {
   title: "Indianapolis DSCR Loan Guide 2026: One of the Best Cash-Flow Markets in the Country",
   description:
     "Indianapolis median home prices around $245,000, gross rental yields near 10 percent, Indiana's 0.85 percent effective property tax rate, and landlord-neutral courts. The DSCR math works here consistently. This guide covers which submarkets produce the strongest ratios and how DSCR qualification works in Indianapolis.",
-  publishDate: "2026-09-15",
+  publishDate: "2026-09-18",
   states: ["indiana"],
   cluster: "DSCR investor",
   dscr: true,
-  readMinutes: 12,
+  readMinutes: 15,
   keywords: {
     primary: "Indianapolis DSCR loan 2026",
     secondary: [
@@ -53,6 +53,22 @@ export const post: Post = {
         "DSCR lenders calculating ratios on Indianapolis properties use market rent appraisals or executed leases for the income figure. The expense side — principal, interest, taxes, insurance, and HOA if applicable — uses the purchase contract price, current rate, the county's actual tax assessment, and an insurance quote appropriate to Indiana's climate exposure. Indiana is not a hurricane or wildfire state; insurance premiums run $1,200 to $1,800 annually for a standard SFR, which at monthly average adds $100 to $150 to the housing obligation.",
         "Most standard DSCR programs require a 1.0 minimum ratio. Some programs allow 0.75 to 0.99 coverage at slightly higher rates, useful for properties that fall just below the threshold on current rents with clear upside. Minimum credit scores typically run 640 to 680 depending on LTV and reserve requirements. Most Indianapolis DSCR deals close with 20 to 25 percent down, 6 months of reserves in liquid accounts post-close, and a property management plan for remote investors.",
         "Reserve requirements in dollar terms are more manageable in Indianapolis than in higher-cost markets. Six months of PITIA on a $245,000 Indianapolis property at current rates runs approximately $10,000 to $12,000 — a fraction of what a similar reserve requirement demands in Dallas or Chicago. This lower barrier to post-close reserves makes portfolio-building in Indianapolis accessible to investors who are still accumulating capital rather than those who have already scaled significantly. Indiana does not assess a state-level real estate transfer tax on investment property sales, which improves exit math for investors who hold and eventually sell.",
+      ],
+    },
+    {
+      heading: "The DSCR math on a representative Indianapolis rental",
+      paragraphs: [
+        "Run the actual calculation on a typical file. Purchase price $220,000 for a three-bedroom single-family rental on the near-east side or in a stable township submarket. Market rent, supported by the appraiser's rent schedule: $1,700 per month. With 20 percent down and a 30-year DSCR loan on a $176,000 balance, principal and interest at prevailing investor rates lands in the neighborhood of $1,250. Add Marion County taxes and landlord insurance \u2014 call it $330 combined \u2014 and PITIA totals roughly $1,580.",
+        "The ratio: $1,700 divided by $1,580 is 1.08. That clears the 1.0 threshold most DSCR lenders require, but sits below the 1.25 tier where pricing improves. The lever is down payment: at 25 percent down, the balance drops to $165,000, PITIA falls to roughly $1,500, and the ratio moves to 1.13. Alternatively, the same 20 percent down on a $195,000 purchase renting for the same $1,700 produces a ratio near 1.20. This is the core discipline of DSCR buying in Indianapolis \u2014 the ratio is negotiated at the purchase price, not at the loan desk.",
+        "Indianapolis is structurally friendly to this math in a way coastal markets are not. Price-to-rent ratios across Marion County and the inner townships routinely support ratios above 1.0 at 20 percent down \u2014 something that is arithmetically impossible in most of California and much of Florida at current prices. That is why out-of-state DSCR capital keeps flowing into Indianapolis: the market clears the lender's ratio test without exotic structuring.",
+      ],
+    },
+    {
+      heading: "Vesting, reserves, and prepayment structure \u2014 the terms that actually vary",
+      paragraphs: [
+        "DSCR lenders permit \u2014 and most investors prefer \u2014 vesting title in an LLC. The loan closes in the entity's name with a personal guarantee from the members, which keeps the debt off conventional credit-capacity calculations and aligns with standard asset-protection practice. This is a structural advantage over conventional investor loans, which require individual vesting at closing. Investors building an Indianapolis portfolio inside an entity should confirm the LLC is formed and in good standing with the Indiana Secretary of State before opening escrow \u2014 entity paperwork is the most common closing delay on these files.",
+        "Reserves are the second underwriting pillar. Expect a requirement of three to six months of PITIA in liquid or near-liquid assets after closing, with the requirement scaling as financed-property count grows. Unlike conventional lending, DSCR programs do not require personal income documentation \u2014 no tax returns, no W-2s, no DTI calculation \u2014 which is precisely why reserves and the ratio carry the underwriting weight. Self-employed investors whose tax returns understate cash flow are the natural constituency.",
+        "Prepayment penalties are where DSCR terms genuinely differ between lenders, and where investors should negotiate. The standard structure is a five-year step-down \u2014 5 percent of balance if paid off in year one, declining one point per year. Shorter structures \u2014 three-year, or penalty buyouts priced into the rate \u2014 exist and matter enormously for BRRRR investors planning a cash-out refinance after stabilization. An investor intending to refinance in eighteen months who accepts a five-year step-down has given away several thousand dollars before the file closes. Match the penalty structure to the hold plan before rate-shopping.",
       ],
     },
   ],

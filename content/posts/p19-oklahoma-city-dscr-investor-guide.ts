@@ -5,11 +5,11 @@ export const post: Post = {
   title: "Oklahoma City DSCR Loan Guide 2026: One of the Highest Cash-Flow Yields of Any Major Metro",
   description:
     "Oklahoma City median home prices near $212,000. SFR rents of $1,350 to $1,750. Gross yields of 10 to 13 percent in established suburban markets. State property taxes near 0.90 percent. DSCR ratios in OKC's workforce housing belt consistently clear 1.10 on standard programs. Here is where deals work and how qualification operates.",
-  publishDate: "2026-10-20",
+  publishDate: "2026-10-23",
   states: ["oklahoma"],
   cluster: "DSCR investor",
   dscr: true,
-  readMinutes: 12,
+  readMinutes: 15,
   keywords: {
     primary: "Oklahoma City DSCR loan 2026",
     secondary: [
@@ -53,6 +53,22 @@ export const post: Post = {
         "DSCR lenders calculating ratios on Oklahoma City properties use market rent appraisals or executed leases for the income figure. The market rent appraisal is a DSCR-specific form completed by a licensed appraiser familiar with OKC's rental market — it establishes the supportable market rent for the subject property based on comparable rental transactions. This number, not the investor's projections or Zillow estimates, is what the lender uses.",
         "Expense side variables: principal and interest at current rate, Oklahoma County property taxes at current assessed value, homeowner's insurance (Oklahoma is in tornado alley — insurance premiums run $1,800 to $2,800 annually for standard SFR depending on construction, age, and storm features, which is meaningfully higher than Indiana or Montana), and HOA if applicable. Oklahoma's insurance premium is the most important expense variable after taxes for OKC DSCR deals — underestimate it and the ratio shifts.",
         "Most standard DSCR programs require 20 to 25 percent down on investment property, six months of PITIA reserves in liquid or semi-liquid accounts post-close, and a minimum 640 to 680 credit score depending on LTV. Oklahoma City's acquisition prices mean the reserve requirement in dollar terms is lower than Chicago or Texas deals of equivalent yield — a structural advantage for investors who are building a portfolio.",
+      ],
+    },
+    {
+      heading: "Worked DSCR example on an Oklahoma City single-family rental",
+      paragraphs: [
+        "Run a representative file. Purchase price $185,000 for a three-bedroom in a stable OKC submarket \u2014 the Village-adjacent tracts, parts of Del City, or south-side neighborhoods with steady tenant demand. Appraiser-supported market rent: $1,500. At 20 percent down, the $148,000 loan carries principal and interest near $1,050 at prevailing DSCR investor rates. Oklahoma County taxes and landlord insurance add roughly $310 \u2014 insurance runs meaningfully higher here than national averages because of hail and wind exposure, and underestimating it is the most common error in out-of-state investors' pro formas. PITIA: approximately $1,360.",
+        "The ratio: $1,500 over $1,360 is 1.10 \u2014 clearing the 1.0 minimum with margin, short of the 1.25 pricing tier. The two levers are the same as anywhere: more down payment or better purchase price. At 25 percent down the ratio moves to about 1.17; negotiating the same house at $172,000 pushes it past 1.15 at 20 percent down. Oklahoma City's price-to-rent structure is what makes this workable at all \u2014 gross yields here routinely support ratios above 1.0 with standard leverage, which is precisely the test that fails in most appreciation-driven coastal markets.",
+        "One OKC-specific underwriting note: appraisal rent schedules in the metro's rapidly transitioning submarkets can lag actual market rents by a meaningful margin. Since the lender uses the appraiser's figure \u2014 not the investor's projection and not the current lease alone \u2014 investors should supply the appraiser with comparable rental data at inspection. A $75 swing in the rent conclusion moves the ratio five points on this file, which can be the difference between pricing tiers.",
+      ],
+    },
+    {
+      heading: "Scaling past the conventional ceiling: portfolio structure in a cash-flow market",
+      paragraphs: [
+        "Conventional investor financing caps a borrower at ten financed properties, and in practice most conventional lenders lose appetite well before that. DSCR lending has no property-count ceiling \u2014 each loan underwrites the subject property's cash flow, not the borrower's aggregate debt picture. In a market like Oklahoma City where individual assets are cheap and cash flow is the point, this is the structural feature that matters most: the investor's fifth, tenth, and twentieth acquisitions underwrite exactly like the first.",
+        "The BRRRR pattern fits OKC's housing stock and price points cleanly: acquire a dated property below market, renovate, lease, then execute a DSCR cash-out refinance against the stabilized value to recover capital for the next acquisition. Most DSCR programs permit cash-out refinancing once seasoning requirements are met \u2014 commonly six months of ownership, with the property's post-renovation appraised value and in-place lease driving the new loan. The prepayment-penalty structure chosen at acquisition governs whether this works economically: an investor planning a twelve-month refinance must buy a short or bought-out penalty structure up front, not discover a five-year step-down at payoff.",
+        "Reserve requirements scale with the portfolio \u2014 expect lenders to require reserves measured against multiple properties' PITIA as financed-property count grows, and to look for landlord experience on larger files. Vesting each property in an LLC, maintaining clean per-property books, and keeping insurance current across the portfolio are not just asset-protection hygiene; they are what keeps the next DSCR approval routine. Oklahoma City rewards the operator who treats a ten-house portfolio like a business, because the financing that builds it is underwritten like one.",
       ],
     },
   ],

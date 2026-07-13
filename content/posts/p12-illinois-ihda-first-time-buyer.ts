@@ -5,10 +5,10 @@ export const post: Post = {
   title: "Illinois First-Time Homebuyer Guide 2026: IHDA Access Forgivable and FHA Stacking in the Chicago Metro",
   description:
     "IHDA Access Forgivable provides 4 percent of the purchase price toward down payment and closing costs, forgiven after four years. Layered on FHA financing it closes the gap between what Illinois first-time buyers have saved and what closing actually requires. Here is how it works, who qualifies, and what to expect.",
-  publishDate: "2026-09-01",
+  publishDate: "2026-09-04",
   states: ["illinois"],
   cluster: "First-time buyer",
-  readMinutes: 11,
+  readMinutes: 14,
   keywords: {
     primary: "Illinois first-time homebuyer 2026",
     secondary: [
@@ -52,6 +52,22 @@ export const post: Post = {
       paragraphs: [
         "At closing, the FHA base loan covers the purchase price minus down payment. The IHDA grant delivers 4 percent of the purchase price into escrow, applied first to the FHA 3.5 percent down payment requirement, then to closing costs in order of lender-negotiated priority. The result is a closing in which the borrower's $1,000 to $2,800 personal contribution, the IHDA grant, and any seller concession cover everything. No large savings transfer required.",
         "The FHA loan carries upfront mortgage insurance premium of 1.75 percent of the base loan amount — financed into the loan, not paid from pocket. Annual MIP runs 0.55 percent of the outstanding balance for 30-year loans at standard LTV. For buyers who build equity above 80 percent through appreciation or principal reduction, a conventional refinance eliminates MIP when the time is right. The IHDA grant does not affect the MIP structure.",
+      ],
+    },
+    {
+      heading: "Cook County versus downstate: how limits and targeting change the math",
+      paragraphs: [
+        "IHDA income and purchase price limits are not uniform across Illinois \u2014 they are set by county and adjusted periodically, with Chicago-metro counties carrying meaningfully higher thresholds than downstate. A household income that disqualifies a buyer in Sangamon County can qualify in Cook, DuPage, or Lake County, where limits reflect metro wage levels. Buyers near a county line should run qualification against both counties before assuming they are over the limit. Because IHDA adjusts these figures, treat any specific dollar threshold you find online as provisional and verify current limits with an IHDA-approved lender at application.",
+        "Targeted areas change the rules further. In federally designated targeted census tracts \u2014 which exist throughout Chicago's South and West Sides and in a number of downstate communities \u2014 the first-time buyer requirement is waived entirely and income limits are elevated. A buyer who owned a home three years ago and would otherwise be ineligible can use IHDA assistance in a targeted tract. This is one of the most under-used provisions in the program, largely because most buyers have never heard of it and most listing agents cannot identify which tracts qualify.",
+        "The purchase price limit interacts with the 2026 lending environment in a favorable way. With the FHFA baseline conforming limit at $832,750 for 2026, virtually no IHDA-eligible purchase in Illinois runs into a conforming ceiling problem \u2014 the program's own purchase price limits bind long before the conforming limit does. The practical consequence: every IHDA-assisted file in Illinois prices as a standard conforming or FHA loan, with none of the jumbo complications that eat into assistance value in coastal markets.",
+      ],
+    },
+    {
+      heading: "The full closing math on a $280,000 Chicago-metro purchase",
+      paragraphs: [
+        "Walk the numbers on a representative purchase. At $280,000 with FHA financing, the down payment requirement is 3.5 percent \u2014 $9,800. Illinois closing costs on a purchase this size typically run $7,000 to $10,000 once lender fees, title, transfer taxes, prepaid insurance, and tax escrows are counted \u2014 Cook County's transfer tax structure pushes the metro toward the higher end. Total cash required before assistance: roughly $17,000 to $20,000.",
+        "IHDA Access Forgivable contributes 4 percent of the purchase price \u2014 $11,200 on this file. Applied first to the $9,800 down payment, it leaves $1,400 for closing costs. The remaining gap of roughly $6,000 to $8,000 can be covered by a seller credit, which FHA permits up to 6 percent of the purchase price. In a balanced Chicago-metro market, a 2 to 3 percent seller credit is a routine negotiation. Structured this way, a buyer can close a $280,000 purchase with a few thousand dollars out of pocket \u2014 earnest money and inspection costs \u2014 rather than $20,000.",
+        "Two cautions on this structure. First, the assistance is not free money if you leave early: sell or refinance inside the four-year forgiveness window and a prorated portion is repaid from proceeds. Second, IHDA files carry a modest rate premium versus a standard FHA loan \u2014 the assistance is funded through the pricing. For a buyer with $20,000 in the bank, a standard FHA loan at the better rate usually wins. For the buyer whose obstacle is accumulation rather than income \u2014 the majority of Illinois first-time buyers \u2014 the premium is the cost of entering the market years earlier, and the math favors entering.",
       ],
     },
   ],

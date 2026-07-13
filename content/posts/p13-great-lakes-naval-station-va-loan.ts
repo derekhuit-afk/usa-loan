@@ -5,10 +5,10 @@ export const post: Post = {
   title: "Naval Station Great Lakes VA Loan Guide 2026: Buying a Home in Lake County Illinois",
   description:
     "Naval Station Great Lakes is the Navy's only boot camp. Permanent-party sailors, first-assignment personnel, and veterans separating near Chicago need VA lenders who understand Lake County's market. This guide covers BAH math, neighborhood options, and what makes Great Lakes VA purchases different.",
-  publishDate: "2026-09-08",
+  publishDate: "2026-09-11",
   states: ["illinois"],
   cluster: "VA military",
-  readMinutes: 10,
+  readMinutes: 13,
   keywords: {
     primary: "Naval Station Great Lakes VA loan 2026",
     secondary: [
@@ -60,6 +60,22 @@ export const post: Post = {
         "Home inspection prior to VA appraisal is strongly recommended in older Lake County housing stock. Identifying needed repairs before the VA appraiser arrives allows the seller and buyer to negotiate repairs or price adjustments before the appraisal documents conditions that can block closing. Properties with deferred roof maintenance, aging HVAC systems, or visible paint deterioration are the most common sources of VA minimum property requirement delays in this market. Working proactively on visible condition issues before listing or before the appraisal is ordered is the most effective way to keep VA closings on schedule in the Great Lakes corridor.",
       ],
     },
+    {
+      heading: "Entitlement math for Lake County buyers in 2026",
+      paragraphs: [
+        "The 2026 baseline conforming limit \u2014 which drives VA guarantee calculations in standard-cost counties like Lake County, Illinois \u2014 is $832,750. For a first-use buyer with full entitlement, the limit is academic: VA imposes no loan cap and no down payment requirement at any purchase price the borrower's income supports. Where the number matters is partial entitlement \u2014 the sailor who bought at a prior duty station, kept the home as a rental, and is now buying near Great Lakes.",
+        "The second-tier calculation works like this: VA guarantees 25 percent of the county conforming limit \u2014 $208,187 in Lake County for 2026 \u2014 minus the entitlement already tied up in the prior loan. A sailor with $80,000 of entitlement committed to a home kept at a previous duty station has roughly $128,000 of remaining guarantee, which supports a zero-down purchase up to approximately $512,000. With Lake County's median comfortably below that figure, most Great Lakes sailors in this situation can buy again with nothing down \u2014 a fact many discover only after a lender who does not work VA files tells them, incorrectly, that they must sell the first home or bring 20 percent.",
+        "Restoration is the other path. If the prior VA loan was paid off at sale, entitlement restores in full with a one-time restoration application. If the prior home was sold but the loan was assumed by another veteran, entitlement remains encumbered until the assuming veteran substitutes their own. Sailors PCSing into Great Lakes should pull their Certificate of Eligibility before house hunting \u2014 the COE states remaining entitlement precisely and takes minutes to obtain through a lender with VA portal access.",
+      ],
+    },
+    {
+      heading: "The funding fee at Great Lakes: what it costs and who pays nothing",
+      paragraphs: [
+        "The VA funding fee for 2026 remains 2.15 percent of the loan amount for first-use buyers putting zero down, and 3.3 percent for subsequent zero-down use. On a $300,000 Lake County purchase, that is $6,450 first use \u2014 financed into the loan, not paid in cash, adding roughly $40 per month to the payment. Putting 5 percent down cuts the fee to 1.5 percent; 10 percent down cuts it to 1.25 percent. For most Great Lakes buyers the zero-down structure still wins: preserving $15,000 to $30,000 of cash outweighs the fee differential, especially for junior sailors early in accumulation years.",
+        "The exemption matters more than the rate table. Veterans receiving VA disability compensation \u2014 at any rating percentage, including 10 percent \u2014 pay no funding fee at all. So do Purple Heart recipients on active duty and eligible surviving spouses. At an installation that processes as many separating and transitioning sailors as Great Lakes, a meaningful share of buyers qualify for the exemption without realizing it. A pending disability claim at closing matters too: if the rating is later granted with an effective date before closing, the fee is refundable \u2014 a check worth thousands that goes unclaimed when nobody tells the borrower to file for it.",
+        "One structural note for dual-military and instructor households at Great Lakes: the funding fee applies per loan, not per person. A married dual-Navy couple using one VA loan pays one fee. Using both service members' entitlement on a single purchase does not double the cost \u2014 it can, however, expand the guarantee on higher-priced purchases in the North Shore communities where instructor families with two incomes tend to shop.",
+      ],
+    },
   ],
   comparison: {
     heading: "Great Lakes housing corridor: community comparison for VA buyers",
@@ -81,7 +97,7 @@ export const post: Post = {
     },
     {
       q: "What is the VA loan limit in Lake County, Illinois?",
-      a: "Lake County, Illinois falls within the standard conforming loan limit for VA purposes. In 2026, the baseline VA guarantee limit is $806,500. For borrowers with full VA entitlement — meaning they have not used VA financing before, or a prior VA loan was paid off and entitlement was restored — there is no loan limit, and no down payment is required regardless of purchase price. Lenders may apply their own overlay limits above the guarantee baseline.",
+      a: "Lake County, Illinois falls within the standard conforming loan limit for VA purposes. In 2026, the baseline VA guarantee limit is $832,750. For borrowers with full VA entitlement — meaning they have not used VA financing before, or a prior VA loan was paid off and entitlement was restored — there is no loan limit, and no down payment is required regardless of purchase price. Lenders may apply their own overlay limits above the guarantee baseline.",
     },
     {
       q: "Does Illinois have a property tax exemption for veterans near Great Lakes?",

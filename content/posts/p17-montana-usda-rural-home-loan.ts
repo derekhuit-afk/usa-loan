@@ -5,10 +5,10 @@ export const post: Post = {
   title: "Montana USDA Rural Home Loan Guide 2026: Zero-Down Financing Across Most of the State",
   description:
     "The majority of Montana's geography qualifies for USDA Rural Development financing — zero down payment, competitive rates, and income limits higher than most Montana buyers realize. This guide covers which Montana communities are USDA-eligible, how income limits work, and what properties qualify.",
-  publishDate: "2026-10-06",
+  publishDate: "2026-10-09",
   states: ["montana"],
   cluster: "First-time buyer",
-  readMinutes: 10,
+  readMinutes: 13,
   keywords: {
     primary: "Montana USDA rural home loan 2026",
     secondary: [
@@ -53,6 +53,22 @@ export const post: Post = {
         "Wells and septic systems require testing and inspection under USDA guidelines. Well water must meet drinking water standards — coliform bacteria, nitrates, and other contaminants are tested as part of the USDA appraisal process. Septic systems must be functioning and servicing only the subject property. Shared well or septic arrangements require USDA approval of the legal agreements governing shared use.",
         "Properties with barns, shops, or other outbuildings are eligible for USDA financing if the primary use of the property is clearly residential and the outbuildings are incidental to residential use rather than income-producing in themselves. A barn on a Montana acreage property that is not actively used for agricultural income does not disqualify the property. A working cattle operation with documented agricultural income generates more scrutiny.",
         "Heating systems in Montana properties receive particular attention in USDA appraisals. Montana winters produce sustained temperatures well below zero in many regions, and USDA requires that the heating system be capable of maintaining a safe interior temperature throughout the coldest months. Properties with wood stove-only heating may require supplemental heating system installation as a condition of USDA approval. This is not a barrier to financing — it is a condition that can be satisfied — but buyers should identify heating adequacy early in the transaction to avoid surprises at the appraisal stage.",
+      ],
+    },
+    {
+      heading: "USDA versus FHA in 2026: the fee math that decides it",
+      paragraphs: [
+        "For Montana buyers who qualify for both, the decision between USDA and FHA is arithmetic, and USDA usually wins it. USDA charges a 1 percent upfront guarantee fee, financed into the loan, and an annual fee of 0.35 percent of the outstanding balance. FHA charges 1.75 percent upfront and an annual mortgage insurance premium of 0.55 percent at the standard low-down-payment tier. On a $250,000 loan, USDA's structure costs roughly $1,875 less upfront and about $40 less per month in the early years \u2014 and USDA requires no down payment at all, versus FHA's 3.5 percent, which is $8,750 the buyer keeps.",
+        "The comparison compounds over a hold period. Neither fee structure cancels automatically at 20 percent equity the way conventional PMI does \u2014 FHA's annual premium runs for the life of the loan at maximum financing, and USDA's annual fee likewise persists \u2014 so the 0.20 percent annual differential accrues year after year. Over a seven-year expected hold on that $250,000 loan, the USDA structure saves a Montana buyer several thousand dollars against the FHA alternative before counting the preserved down payment.",
+        "Where FHA retakes the lead: buyers over USDA's income limit, properties inside ineligible town cores, credit profiles below where USDA's automated underwriting is comfortable, and \u2014 importantly \u2014 buyers who need the seller-credit and gift flexibility FHA's larger ecosystem sometimes prices better. The right move is to run both structures side by side on the actual property and household, which takes a lender ten minutes and removes the guesswork.",
+      ],
+    },
+    {
+      heading: "Which Montana communities actually pass the eligibility map",
+      paragraphs: [
+        "USDA eligibility is property-based, determined by the program's published map, and the pattern in Montana is consistent: the urbanized cores of Billings, Missoula, Great Falls, and Bozeman are ineligible, while an enormous share of everything else qualifies. The eligibility boundary frequently sits just past the city limits \u2014 communities like Belgrade and Manhattan outside Bozeman, Lolo and Frenchtown outside Missoula, and the towns ringing Billings have historically fallen on the eligible side of the line, subject to the map revisions USDA makes after each census cycle. Because boundaries move, verify the specific parcel address in the USDA eligibility tool before writing an offer \u2014 eligibility is binary and checking takes thirty seconds.",
+        "This geography maps neatly onto how Montanans actually buy. The households priced out of Bozeman and Missoula proper are exactly the households shopping the eligible commuter towns twenty minutes out \u2014 which means the zero-down program applies precisely where affordability pressure is pushing buyers. A Belgrade purchase at $420,000 with zero down, versus the same buyer needing $14,700 minimum on FHA, is the difference between buying this year and saving for two more.",
+        "Income limits are the second gate: household income must fall at or below 115 percent of area median income, adjusted for household size, and the calculation counts the income of all adults in the household \u2014 not just borrowers on the note. Montana's limits are set by county and household size and adjust annually; dual-income professional households near the Bozeman limit should have a lender run the calculation formally, because allowable deductions for childcare and dependents move real families from over-limit to eligible more often than the raw numbers suggest.",
       ],
     },
   ],

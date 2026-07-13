@@ -5,11 +5,11 @@ export const post: Post = {
   title: "Indiana VA Loan Guide 2026: Fort Benjamin Harrison, Guard Veterans, and Indianapolis Purchasing Power",
   description:
     "Fort Benjamin Harrison's reserve and Guard mission generates consistent VA loan demand in Marion and Hamilton Counties. Indiana's affordable home prices mean VA entitlement goes further here than in most states. This guide covers BAH rates, Indianapolis neighborhood options, and Indiana's veteran property tax exemption.",
-  publishDate: "2026-09-22",
+  publishDate: "2026-09-25",
   states: ["indiana"],
   cluster: "VA military",
   dscr: true,
-  readMinutes: 10,
+  readMinutes: 13,
   keywords: {
     primary: "Indiana VA loan 2026",
     secondary: [
@@ -58,6 +58,22 @@ export const post: Post = {
       paragraphs: [
         "Indiana's home prices mean VA entitlement has exceptional purchasing reach relative to most states. A veteran with full entitlement can purchase a $285,000 Indianapolis home with zero down payment and no private mortgage insurance. Total cash to close on a typical Indiana VA purchase runs $3,000 to $5,500 in transaction costs, and sellers frequently contribute closing costs as a negotiated concession. The practical result is that qualified Indiana veterans can purchase with minimal out-of-pocket cost while building equity from the first payment.",
         "Indiana's market also supports simultaneous VA loan usage in specific circumstances. A veteran who owns a home financed with a VA loan and needs to relocate may be able to obtain a second VA loan on a new Indiana primary residence without first selling the existing property. This requires sufficient remaining entitlement and lender approval. The ability to retain the first home as a rental while purchasing a second with VA financing creates a path to building a residential real estate position using the VA benefit rather than higher-rate investment financing products. Indiana's low home prices make this dual-use strategy more financially accessible than in markets where the first VA purchase exhausts most available entitlement.",
+      ],
+    },
+    {
+      heading: "2026 loan limits and entitlement for Indiana veterans",
+      paragraphs: [
+        "Every Indiana county carries the standard 2026 conforming limit of $832,750 \u2014 no Indiana county is designated high-cost. For VA guarantee purposes that produces a full-entitlement guarantee of $208,187, and for buyers with full entitlement the practical meaning is simple: no down payment at any price point the household's income supports, anywhere in the state. With Marion County's median price sitting far below the conforming limit, Indiana is one of the country's most comfortable zero-down VA markets \u2014 the entitlement math almost never binds.",
+        "Partial entitlement scenarios still deserve calculation. A veteran who used VA financing at a prior duty station and kept the home as a rental retains encumbered entitlement. Remaining guarantee equals $208,187 minus entitlement in use; multiply the remainder by four for the approximate zero-down purchase ceiling. A veteran with $60,000 committed elsewhere still supports roughly $590,000 of zero-down purchasing power in Indianapolis \u2014 beyond what most buyers here need. The point is not that the math is restrictive; it is that a lender should run it precisely rather than defaulting to a down payment requirement that federal rules do not impose.",
+        "For the retiree and drilling-reservist population concentrated around the Lawrence and Fort Harrison area, one eligibility note: National Guard and Reserve members qualify with six creditable years of service, or with any period of activation under Title 10 \u2014 and 2020-era mobilizations activated a large cohort whose members often do not realize they crossed the eligibility line. Pulling a Certificate of Eligibility costs nothing and settles the question in minutes.",
+      ],
+    },
+    {
+      heading: "Stacking Indiana's property tax deductions on top of the VA loan",
+      paragraphs: [
+        "The VA loan is a federal benefit; Indiana adds state-level property tax deductions for disabled veterans that stack on top of it, and the combination changes the monthly math. Indiana offers assessed-value deductions for veterans with service-connected disability ratings and for wartime veterans over specified age and disability thresholds, applied through the county auditor. The dollar amounts and qualification tiers are set by the legislature and adjust over time \u2014 verify current figures with the Marion County (or your county's) auditor \u2014 but for qualifying veterans the deduction commonly removes tens of thousands of dollars of assessed value from taxation.",
+        "The sequencing matters for escrow accuracy. Property tax deductions in Indiana are claimed by filing with the county auditor, generally by the statutory deadline in the year the deduction first applies. File in the same season you close and the lender's escrow analysis can reflect the reduced tax bill within the first cycle; miss the filing and you overpay escrow for a year, then chase a refund. Veterans with a 100 percent permanent-and-total rating should also review the additional deductions available at that tier \u2014 the stack is meaningful and routinely goes unclaimed.",
+        "One interaction to flag: the VA funding fee exemption and the Indiana tax deductions key off the same disability rating but operate independently \u2014 the federal exemption applies at closing, the state deduction applies annually thereafter. A veteran with a 30 percent rating buying a $280,000 Lawrence-area home pays no funding fee (saving roughly $6,000 at closing) and reduces the ongoing tax bill through the state deduction. These are separate filings with separate offices; neither happens automatically.",
       ],
     },
   ],

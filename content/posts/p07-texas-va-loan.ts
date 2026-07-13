@@ -72,7 +72,7 @@ export const post: Post = {
       ["E-5 BAH w/dep (2026)", "$1,776/mo", "$1,974/mo"],
       ["Median home price", "~$241,000", "~$275,000–$310,000"],
       ["County property tax rate", "Bell County ~1.82 percent", "Bexar County ~2.13 percent"],
-      ["VA loan limit", "Bell County $806,500", "Bexar County $806,500"],
+      ["VA loan limit", "Bell County $832,750", "Bexar County $832,750"],
       ["100% disabled vet property tax", "Full exemption", "Full exemption"],
       ["No state income tax", "Yes", "Yes"],
     ],

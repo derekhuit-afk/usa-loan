@@ -5,11 +5,11 @@ export const post: Post = {
   title: "Oklahoma VA Loan Guide 2026: Tinker AFB, Fort Sill, and Altus — Buying Power Breakdown",
   description:
     "Oklahoma has three major active-duty installations and some of the most affordable median home prices of any VA-active state. Tinker AFB in Midwest City, Fort Sill near Lawton, and Altus AFB each have distinct housing markets. This guide covers BAH rates, neighborhood options, and Oklahoma's veteran benefits.",
-  publishDate: "2026-10-13",
+  publishDate: "2026-10-16",
   states: ["oklahoma"],
   cluster: "VA military",
   dscr: true,
-  readMinutes: 11,
+  readMinutes: 14,
   keywords: {
     primary: "Oklahoma VA loan 2026",
     secondary: [
@@ -53,6 +53,22 @@ export const post: Post = {
       paragraphs: [
         "Altus Air Force Base in Jackson County is home to the 97th Air Mobility Wing and conducts heavy airlift training. The surrounding Altus community carries median home prices of $110,000 to $160,000 — some of the lowest of any active-duty installation in the Air Force. VA entitlement goes exceptionally far in Jackson County. A modest $130,000 Altus home financed with VA produces total PITIA under that figure including property taxes and insurance.",
         "Oklahoma exempts all military retirement pay from state income tax. For Air Force retirees who choose to stay in the Altus area after service, this exemption on a $30,000 to $50,000 annual retirement income stream represents $1,400 to $2,500 in annual tax savings versus states with income tax on military retirement. Oklahoma also provides a full property tax exemption for veterans rated 100 percent permanently and totally disabled on their primary residence.",
+      ],
+    },
+    {
+      heading: "Entitlement math for Oklahoma buyers in 2026",
+      paragraphs: [
+        "Every Oklahoma county \u2014 including Oklahoma County and Cleveland County around Tinker, and Comanche County around Fort Sill \u2014 carries the standard 2026 conforming limit of $832,750, producing a full-entitlement VA guarantee of $208,187. Set that against Oklahoma's price level: metro Oklahoma City medians in the mid-$200s and Lawton medians well below that. The guarantee ceiling is roughly triple what a typical purchase requires. Oklahoma is, by the numbers, one of the most frictionless zero-down VA markets in the country.",
+        "The abundance changes strategy for the multi-loan scenarios common in a two-installation state. An NCO who bought at Fort Sill, kept the Lawton home as a rental, and PCS'd to Tinker can run the second-tier calculation with room to spare: a $180,000 Lawton loan consumes roughly $45,000 of entitlement, leaving about $163,000 of guarantee \u2014 supporting a zero-down Tinker-area purchase to roughly $650,000, far beyond the local price range. Oklahoma's low prices mean service members here almost never exhaust entitlement, which makes the keep-and-rent pattern more accessible than at coastal installations.",
+        "Eligibility reminders specific to these installations: Fort Sill's training population includes Guard and Reserve soldiers on Title 10 activations, and those activation periods confer VA loan eligibility that six-year drilling requirements otherwise govern. Tinker's large civilian-veteran workforce \u2014 the depot employs thousands of separated members \u2014 holds eligibility earned during prior service that does not expire. The benefit has no use-by date; a veteran who separated fifteen years ago and never used it retains full entitlement today.",
+      ],
+    },
+    {
+      heading: "The funding fee in a low-price market \u2014 and who is exempt around Fort Sill and Tinker",
+      paragraphs: [
+        "The 2026 funding fee schedule is unchanged: 2.15 percent for first zero-down use, 3.3 percent for subsequent zero-down use, stepping down to 1.5 and 1.25 percent at 5 and 10 percent down. Oklahoma's price level shrinks the absolute cost: on a $230,000 Midwest City purchase the first-use fee is $4,945, financed into the loan for roughly $30 per month. The percentage headlines that alarm buyers in $600,000 markets translate to manageable dollars here \u2014 which is worth stating plainly, because the fee is the single most common reason misinformed buyers avoid VA financing.",
+        "The exemption population around these two installations is unusually large. Fort Sill's artillery community and the medical processing that runs through it generate a high rate of service-connected disability ratings, and any compensable rating \u2014 10 percent qualifies \u2014 eliminates the funding fee entirely. So does a memorandum rating in hand at closing, and a rating granted retroactively after closing entitles the borrower to a refund of a fee already paid. Every Lawton and Midwest City VA file should start with the disability-status question, because it moves thousands of dollars.",
+        "For buyers not exempt, the finance-versus-pay-cash decision leans harder toward financing here than elsewhere. At Oklahoma loan sizes the fee adds trivially to the payment, while the equivalent cash preserved covers a full year of taxes and insurance reserves. The disciplined structure for a young E-5 at either installation: zero down, fee financed, cash held for the maintenance realities of the 1960s-and-70s housing stock that dominates Midwest City, Del City, and Lawton.",
       ],
     },
   ],

@@ -5,10 +5,10 @@ export const post: Post = {
   title: "Malmstrom AFB VA Loan Guide 2026: Buying a Home in Great Falls, Montana",
   description:
     "Malmstrom Air Force Base is Montana's only major active-duty installation. Great Falls median prices around $278,000, low property taxes, and no state income tax make VA financing particularly effective here. This guide covers BAH math, Great Falls neighborhood options, and Montana's veteran property tax benefits.",
-  publishDate: "2026-09-29",
+  publishDate: "2026-10-02",
   states: ["montana"],
   cluster: "VA military",
-  readMinutes: 9,
+  readMinutes: 12,
   keywords: {
     primary: "Malmstrom AFB VA loan 2026",
     secondary: [
@@ -52,6 +52,22 @@ export const post: Post = {
         "Montana VA appraisals take longer than most states because the VA appraiser pool is thin across a large geographic area. Plan for 15 to 25 business days for appraisal delivery in Great Falls rather than the 7 to 12 days common in urban markets. Purchase agreements should include adequate appraisal contingency periods. Well and septic properties — common outside Great Falls city limits — require specific VA inspection conditions that can extend the process further.",
         "Montana has no state income tax, which benefits military buyers who receive taxable housing and subsistence allowances beyond BAH. Active-duty airmen and their families relocating from higher-tax states should model the after-tax income comparison as part of the PCS financial planning process. Montana also exempts military retirement pay from state income tax. For a retired Air Force officer, that exemption on a retirement check of $48,000 annually eliminates a tax obligation that would exist in most other states — keeping more income available for housing, savings, and the Montana lifestyle that drew them to stay.",
         "The Montana Disabled Veterans Assistance Program provides a refundable property tax credit for disabled veterans. Veterans rated 100 percent permanently and totally disabled may qualify for a full property tax exemption on a primary residence. Applications are filed with the Montana Department of Revenue and require VA rating documentation.",
+      ],
+    },
+    {
+      heading: "Entitlement and loan limits in Cascade County for 2026",
+      paragraphs: [
+        "Cascade County carries the standard 2026 conforming limit of $832,750, which sets the VA guarantee at $208,187 for full-entitlement buyers. Against Great Falls' median home price \u2014 among the lowest of any Air Force base community in the continental United States \u2014 the limit is irrelevant to nearly every file. Full-entitlement buyers finance zero-down at any locally realistic price point, and even buyers with substantial entitlement encumbered at a prior duty station rarely hit a ceiling here. This is the arithmetic reason Malmstrom is one of the easiest bases in the country to buy at: modest prices meet an uncapped federal guarantee.",
+        "The more common entitlement question at Malmstrom runs the other direction \u2014 airmen who buy in Great Falls, PCS out, keep the home as a rental, and want VA financing again at the next station. Great Falls' price level works in their favor: a $250,000 purchase consumes roughly $62,500 of entitlement, leaving approximately $145,000 of guarantee \u2014 enough to support a zero-down purchase near $580,000 at the next assignment. Buying inexpensive at Malmstrom preserves buying power for the more expensive base that often follows.",
+        "Missile-field families weighing distance should note that VA occupancy rules concern the home being financed, not its proximity to the duty section. Buying in Great Falls proper while working dispersed facility schedules is a routine VA file. Buying farther out in Cascade County acreage is also financeable \u2014 VA has no acreage cap \u2014 though appraisers must support value with comparable sales, and thinly traded rural segments can slow the appraisal. Build timeline slack into rural offers.",
+      ],
+    },
+    {
+      heading: "PCS timing, occupancy, and converting the Great Falls home to a rental",
+      paragraphs: [
+        "VA requires the buyer to occupy the home as a primary residence, generally within 60 days of closing. For inbound Malmstrom airmen this creates the familiar sequencing problem: sign at the losing station or buy sight-mostly-unseen. Both are workable. A spouse can satisfy occupancy when the member is deployed or in training en route, and remote closings with powers of attorney are standard practice for lenders who work military files. The occupancy certification is a statement of intent at closing \u2014 a later PCS does not violate it.",
+        "That last point is the one that changes financial trajectories. When orders arrive, the VA-financed Great Falls home can be converted to a rental with no penalty, no refinance requirement, and no lender permission beyond keeping the payments current. Great Falls' rental market \u2014 fed by a continuous rotation of incoming airmen, missile-field contractors, and hospital staff \u2014 absorbs three-bedroom homes reliably. The airman who buys at Malmstrom, occupies for a tour, converts to a rental at PCS, and repeats at the next base is running the most common enlisted wealth-building pattern in the modern force, and the funding-fee and entitlement math above is what makes each successive step financeable.",
+        "Sequence the exit correctly: obtain the landlord insurance conversion before tenants take possession, keep the VA loan's escrow intact, and document the lease \u2014 the next lender will count a portion of that rent toward qualifying income on the follow-on purchase once it is contracted. Skipping the documentation costs qualifying power at exactly the moment the family needs it.",
       ],
     },
   ],
