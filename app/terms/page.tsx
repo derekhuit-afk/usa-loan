@@ -77,7 +77,7 @@ export default function TermsPage() {
           </p>
 
           <p className="text-xs text-ink/50">
-            Powered by Cardinal Financial Company, Limited Partnership | NMLS #66247. Equal Housing Opportunity. USA.loan is a private website operated by a licensed mortgage loan originator and is not a government agency. It is not affiliated with, endorsed by, or sponsored by the U.S. government, the Department of Veterans Affairs, HUD, FHA, USDA, or any other federal or state agency. Not a commitment to lend.
+            Powered by Cardinal Financial Company, Limited Partnership | NMLS #66247. Equal Housing Opportunity. USA.loan is a private website operated by a licensed mortgage loan originator and is not a government agency. It is not affiliated with, endorsed by, or sponsored by the U.S. government, the Department of Veterans Affairs, HUD, FHA, USDA, or any other federal or state agency. Texas consumers: <a href="/texas-complaint-notice" className="underline hover:text-ink/70">Texas Consumer Complaint and Recovery Fund Notice</a>. Not a commitment to lend.
           </p>
         </div>
       </div>
