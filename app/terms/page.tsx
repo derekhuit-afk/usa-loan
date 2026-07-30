@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ComplianceFooter from "@/components/ComplianceFooter";
 
 export const metadata = {
   title: 'Terms of Use — USA.loan',
@@ -75,12 +76,9 @@ export default function TermsPage() {
             For questions about these Terms, contact Derek Huit, NMLS #203980, through the application link on this site. Licensing details:{' '}
             <a className="underline" href="https://www.cardinalfinancial.com/nmls-licensing" target="_blank" rel="noopener">cardinalfinancial.com/nmls-licensing</a>.
           </p>
-
-          <p className="text-xs text-ink/50">
-            Powered by Cardinal Financial Company, Limited Partnership | NMLS #66247. Equal Housing Opportunity. USA.loan is a private website operated by a licensed mortgage loan originator and is not a government agency. It is not affiliated with, endorsed by, or sponsored by the U.S. government, the Department of Veterans Affairs, HUD, FHA, USDA, or any other federal or state agency. Texas consumers: <a href="/texas-complaint-notice" className="underline hover:text-ink/70">Texas Consumer Complaint and Recovery Fund Notice</a>. Not a commitment to lend.
-          </p>
         </div>
       </div>
+      <ComplianceFooter />
     </main>
   );
 }

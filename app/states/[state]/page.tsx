@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import ComplianceFooter from "@/components/ComplianceFooter";
 import Link from "next/link";
 import { getState, STATES } from "@/content/states";
 import { getProgram } from "@/content/programs";
@@ -234,15 +235,7 @@ export default function StatePage({ params }: { params: { state: string } }) {
       />
 
       {/* ── Footer compliance ── */}
-      <div className="border-t border-navy/10 bg-white px-6 py-8 md:px-10">
-        <p className="mx-auto max-w-6xl text-xs leading-relaxed text-ink/40">
-          Derek Huit, NMLS #203980, is licensed to originate mortgage loans in Alaska, Georgia, Illinois, Indiana,
-          Michigan, Montana, Oklahoma, Texas, Florida, and Washington. Cardinal Financial Company, Limited Partnership,
-          NMLS #66247. Equal Housing Opportunity. USA.loan is a private website operated by a licensed mortgage loan originator and is not a government agency. It is not affiliated with, endorsed by, or sponsored by the U.S. government, the Department of Veterans Affairs, HUD, FHA, USDA, or any other federal or state agency. Texas consumers: <a href="/texas-complaint-notice" className="underline hover:text-ink/70">Texas Consumer Complaint and Recovery Fund Notice</a>. This is not a commitment to lend. All loans subject to credit
-          approval, underwriting, and appraisal.
-          {s.dscr && " " + DSCR_DISCLOSURE}
-        </p>
-      </div>
+      <ComplianceFooter extra={s.dscr ? DSCR_DISCLOSURE : undefined} />
     </main>
   );
 }

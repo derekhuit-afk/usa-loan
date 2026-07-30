@@ -710,8 +710,7 @@ function Footer() {
         <div className="mt-12 border-t border-cream/10 pt-8 text-xs leading-relaxed text-cream/40">
           <p>
             ⌂ Equal Housing Opportunity. USA.loan is a private website operated by a licensed mortgage loan originator and is not a government agency. It is not affiliated with, endorsed by, or sponsored by the U.S. government, the Department of Veterans Affairs, HUD, FHA, USDA, or any other federal or state agency. Texas consumers: <a href="/texas-complaint-notice" className="underline hover:text-ink/70">Texas Consumer Complaint and Recovery Fund Notice</a>. Derek Huit, NMLS #203980, is licensed in Alaska, Florida, Georgia, Illinois, Indiana,
-            Michigan, Montana, Oklahoma, Texas, and Washington. Cardinal Financial Company, Limited Partnership, NMLS
-            #66247, holds state licenses as described at cardinalfinancial.com/nmls-licensing. This site is not
+            Michigan, Montana, Oklahoma, Texas, and Washington. Cardinal Financial Company, Limited Partnership, NMLS #66247 (<a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/66247" className="underline hover:text-cream/70" target="_blank" rel="noopener noreferrer">NMLS Consumer Access</a>), holds state licenses as described at <a href="https://www.cardinalfinancial.com/nmls-licensing" className="underline hover:text-cream/70" target="_blank" rel="noopener noreferrer">cardinalfinancial.com/nmls-licensing</a>. This site is not
             authorized by the New York State Department of Financial Services. No mortgage loan applications for
             properties located in the state of New York will be accepted through this site.
           </p>
