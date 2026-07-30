@@ -718,7 +718,20 @@ function Footer() {
             This is not a commitment to lend. All loans subject to credit approval, underwriting, and appraisal. Rates,
             terms, and programs are subject to change at any time without notice. Not all applicants will qualify.
           </p>
-          <p className="mt-4">© 2026 Huitai LLC. All rights reserved. USA.loan is a marketing site operated by Huitai LLC.</p>
+          <p className="mt-4">
+            Visit the NMLS Consumer Access website at{" "}
+            <a href="https://www.nmlsconsumeraccess.org" className="underline hover:text-cream/70" target="_blank" rel="noopener noreferrer">www.nmlsconsumeraccess.org</a>{" "}
+            for regulatory information about us. Cardinal Financial Company, Limited Partnership (NMLS ID 66247).{" "}
+            <a href="https://cardinalfinancial.com/privacypolicy/" className="underline hover:text-cream/70" target="_blank" rel="noopener noreferrer">Cardinal Financial Privacy Policy</a>
+            {" | "}
+            <a href="https://cardinalfinancial.com/terms-and-conditions/" className="underline hover:text-cream/70" target="_blank" rel="noopener noreferrer">Cardinal Financial Terms and Conditions</a>
+            {" | "}
+            <a href="https://cardinalfinancial.com/nmls-licensing/" className="underline hover:text-cream/70" target="_blank" rel="noopener noreferrer">Cardinal Financial Licensing</a>
+          </p>
+          <p className="mt-4">© 2026 Huitai LLC. All rights reserved. USA.loan is operated by Huitai LLC. Loan products are offered
+            through Cardinal Financial Company, Limited Partnership (NMLS ID 66247). © 2026 Cardinal Financial Company,
+            Limited Partnership. All Cardinal Financial trademarks and trade names are the property of Cardinal Financial
+            Company, Limited Partnership.</p>
         </div>
       </div>
     </footer>

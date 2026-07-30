@@ -31,7 +31,9 @@ export default function ComplianceFooter({ extra }: { extra?: string }) {
           >
             cardinalfinancial.com/nmls-licensing
           </a>
-          . Equal Housing Opportunity.
+          . Visit the NMLS Consumer Access website at{" "}
+          <a href="https://www.nmlsconsumeraccess.org" className="underline hover:text-ink/70" target="_blank" rel="noopener noreferrer">www.nmlsconsumeraccess.org</a>{" "}
+          for regulatory information about us. Cardinal Financial Company, Limited Partnership (NMLS ID 66247). Equal Housing Opportunity.
         </p>
         <p className="mt-3">
           USA.loan is a private website operated by a licensed mortgage loan originator and is not a government
@@ -61,6 +63,24 @@ export default function ComplianceFooter({ extra }: { extra?: string }) {
           <a href="/texas-complaint-notice" className="underline hover:text-ink/70">
             Texas Complaint Notice
           </a>
+          {" | "}
+          <a href="https://cardinalfinancial.com/privacypolicy/" className="underline hover:text-ink/70" target="_blank" rel="noopener noreferrer">
+            Cardinal Financial Privacy Policy
+          </a>
+          {" | "}
+          <a href="https://cardinalfinancial.com/terms-and-conditions/" className="underline hover:text-ink/70" target="_blank" rel="noopener noreferrer">
+            Cardinal Financial Terms and Conditions
+          </a>
+          {" | "}
+          <a href="https://cardinalfinancial.com/nmls-licensing/" className="underline hover:text-ink/70" target="_blank" rel="noopener noreferrer">
+            Cardinal Financial Licensing
+          </a>
+        </p>
+        <p className="mt-3">
+          © 2026 Huitai LLC. All rights reserved. USA.loan is operated by Huitai LLC. Loan products are offered
+          through Cardinal Financial Company, Limited Partnership (NMLS ID 66247). © 2026 Cardinal Financial
+          Company, Limited Partnership. All Cardinal Financial trademarks and trade names are the property of
+          Cardinal Financial Company, Limited Partnership.
         </p>
       </div>
     </div>
