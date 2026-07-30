@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ComplianceFooter from "@/components/ComplianceFooter";
 
 export const metadata: Metadata = {
   title: "Texas Consumer Complaint and Recovery Fund Notice | USA.loan",
@@ -56,6 +57,7 @@ export default function TexasComplaintNoticePage() {
           a commitment to lend.
         </p>
       </div>
+      <ComplianceFooter />
     </main>
   );
 }
